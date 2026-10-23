@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header {
+    border-bottom: 2px solid #2b5282;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2b5282;
+    margin: 0 0 5px 0;
+    font-size: 24px;
+}
+
+.empresa {
+    font-weight: bold;
+    color: #4a5568;
+}
+
+h2 {
+    color: #2b5282;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 5px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+h3 {
+    color: #2d3748;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.politica {
+    background-color: #f8fafc;
+    border-left: 4px solid #2b5282;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #cbd5e0;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #edf2f7;
+    color: #2d3748;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #718096;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+  }
