@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Seguridad - TurLux Games & Software S.A.</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        
+        <header>
+            <h1>Política de Seguridad Informática</h1>
+            <div class="empresa">TurLux Games & Software S.A.</div>
+        </header>
+
+        <section>
+            <h2>1. Presentación de la Empresa</h2>
+            <p><strong>Razón Social:</strong> TurLux Games & Software S.A.</p>
+            <p><strong>Actividad:</strong> Desarrollo de software y videojuegos nativos para el sistema operativo Linux.</p>
+            <p><strong>Modelo de Negocio:</strong> Venta y distribución digital de programas, motores gráficos y juegos a través de su sitio web y servidores propios.</p>
+        </section>
+
+        <section>
+            <h2>2. Puntos Clave de Seguridad</h2>
+            
+            <h3>a. Activos a Proteger</h3>
+            <ul>
+                <li>Código fuente de los programas y juegos.</li>
+                <li>Servidores de desarrollo y distribución de descargas.</li>
+                <li>Computadoras de trabajo del personal.</li>
+                <li>Equipos de red y conexiones a Internet.</li>
+            </ul>
+
+            <h3>b. Información Sensible</h3>
+            <ul>
+                <li>Claves de acceso a servidores y llaves SSH.</li>
+                <li>Claves privadas de firmado de ejecutables.</li>
+                <li>Bases de datos de usuarios y registros de pagos.</li>
+                <li>Datos personales de los empleados.</li>
+            </ul>
+
+            <h3>c. Amenazas</h3>
+            <ul>
+                <li>Engaños por correo (Phishing) a los empleados.</li>
+                <li>Infección con virus o programas dañinos.</li>
+                <li>Robo de contraseñas de administradores.</li>
+                <li>Ataques para tirar la página web o detener las descargas.</li>
+            </ul>
+
+            <h3>d. Vulnerabilidades</h3>
+            <ul>
+                <li>Uso de contraseñas débiles.</li>
+                <li>Falta de actualización en programas de terceros.</li>
+                <li>Guardar contraseñas escritas en el código fuente.</li>
+                <li>Falta de verificación en dos pasos en los accesos.</li>
+            </ul>
+
+            <h3>e. Riesgos</h3>
+            <ul>
+                <li>Robo o filtración de juegos antes del lanzamiento.</li>
+                <li>Distribución involuntaria de programas infectados.</li>
+                <li>Parada de producción por fallas en servidores.</li>
+                <li>Daño a la reputación de la empresa.</li>
+            </ul>
+
+            <h3>f. Perfiles de Usuarios</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Perfil</th>
+                        <th>Acceso Permitido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Programadores</strong></td>
+                        <td>Únicamente al código fuente de los proyectos asignados.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diseñadores y Artistas</strong></td>
+                        <td>Servidores de imágenes, modelos 3D y sonidos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Administradores</strong></td>
+                        <td>Servidores y red (acceso total pero controlado).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Administrativos</strong></td>
+                        <td>Sistemas de facturación, compras y personal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Usuarios Finales</strong></td>
+                        <td>Página web para comprar y descargar los juegos.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>g. Necesidades Principales</h3>
+            <ul>
+                <li><strong>Confidencialidad:</strong> Que solo las personas autorizadas vean los datos.</li>
+                <li><strong>Integridad:</strong> Que nadie altere el código de los juegos.</li>
+                <li><strong>Disponibilidad:</strong> Que los servidores funcionen siempre que se necesiten.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Políticas de Seguridad</h2>
+
+            <div class="politica">
+                <h3>Política 1: Control de Acceso</h3>
+                <p><strong>Objetivo:</strong> Controlar quién entra a los sistemas de la empresa.</p>
+                <p><strong>Alcance:</strong> Todo el personal de TurLux.</p>
+                <p><strong>Responsables:</strong> Área de Sistemas y cada usuario con su clave.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Las contraseñas deben tener mínimo 12 caracteres (letras, números y símbolos).</li>
+                    <li>Prohibido compartir cuentas o usar claves prestadas.</li>
+                    <li>Uso obligatorio de llaves SSH personales para servidores Linux.</li>
+                    <li>Obligatorio usar verificación en dos pasos (código al celular).</li>
+                </ul>
+                <p><strong>Controles:</strong> Bloqueo automático de cuenta al quinto intento fallido.</p>
+                <p><strong>Incumplimiento:</strong> Se deshabilita la cuenta y se notifica al jefe directo.</p>
+                <p><strong>Revisión:</strong> Se revisa una vez al año.</p>
+            </div>
+
+            <div class="politica">
+                <h3>Política 2: Desarrollo Seguro</h3>
+                <p><strong>Objetivo:</strong> Crear programas limpios y sin fallas de seguridad.</p>
+                <p><strong>Alcance:</strong> Programadores y desarrolladores.</p>
+                <p><strong>Responsables:</strong> Líder de Desarrollo y Encargado de Seguridad.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Prohibido escribir contraseñas dentro del código fuente.</li>
+                    <li>Todo código debe ser revisado por otro compañero antes de guardarse.</li>
+                    <li>Mantener actualizadas las librerías de programación utilizadas.</li>
+                </ul>
+                <p><strong>Controles:</strong> Revisión automática en el servidor antes de autorizar la subida de código.</p>
+                <p><strong>Incumplimiento:</strong> Rechazo de la entrega y capacitación obligatoria.</p>
+                <p><strong>Revisión:</strong> Se revisa cada 6 meses.</p>
+            </div>
+
+            <div class="politica">
+                <h3>Política 3: Copias de Seguridad (Backups)</h3>
+                <p><strong>Objetivo:</strong> Evitar la pérdida de información si falla un equipo.</p>
+                <p><strong>Alcance:</strong> Repositorios de código y bases de datos.</p>
+                <p><strong>Responsables:</strong> Equipo de Infraestructura y Servidores.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Respaldos automáticos todos los días.</li>
+                    <li>Guardar las copias cifradas y fuera de la oficina principal.</li>
+                    <li>Probar la restauración de las copias periódicamente.</li>
+                </ul>
+                <p><strong>Controles:</strong> Alertas automáticas al técnico si falla una copia.</p>
+                <p><strong>Incumplimiento:</strong> Plazo máximo de 3 horas para solucionar fallas en los respaldos.</p>
+                <p><strong>Revisión:</strong> Prueba de recuperación y revisión cada 6 meses.</p>
+            </div>
+
+            <div class="politica">
+                <h3>Política 4: Gestión de Incidentes</h3>
+                <p><strong>Objetivo:</strong> Actuar rápido ante cualquier ataque o falla técnica.</p>
+                <p><strong>Alcance:</strong> Toda la empresa.</p>
+                <p><strong>Responsables:</strong> Equipo de Respuesta a Incidentes.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Avisar inmediatamente al equipo de soporte ante cualquier problema o sospecha.</li>
+                    <li>Prohibido apagar o reiniciar computadoras infectadas sin autorización.</li>
+                    <li>Anotar y guardar un registro de todo problema ocurrido.</li>
+                </ul>
+                <p><strong>Controles:</strong> Antivirus y monitoreo en los servidores Linux.</p>
+                <p><strong>Incumplimiento:</strong> Ocultar un problema de seguridad será considerado una falta grave.</p>
+                <p><strong>Revisión:</strong> Análisis después de cada problema y revisión del plan una vez al año.</p>
+            </div>
+        </section>
+
+        <footer>
+            TurLux Games & Software S.A. - Documento Interno de Seguridad
+        </footer>
+
+    </div>
+
+</body>
+</html>
