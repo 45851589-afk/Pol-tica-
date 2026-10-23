@@ -1,91 +1,132 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f19;
+    color: #e2e8f0;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 30px 15px;
 }
 
 .contenedor {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: linear-gradient(145deg, #131b2e, #1a233a);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.1);
+    border: 1px solid #1e293b;
 }
 
 header {
-    border-bottom: 2px solid #2b5282;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #00f2fe;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 h1 {
-    color: #2b5282;
-    margin: 0 0 5px 0;
-    font-size: 24px;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .empresa {
     font-weight: bold;
-    color: #4a5568;
+    color: #38bdf8;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
 h2 {
-    color: #2b5282;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 5px;
-    margin-top: 25px;
-    font-size: 18px;
+    color: #38bdf8;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+    margin-top: 35px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
 h3 {
-    color: #2d3748;
+    color: #f1f5f9;
     font-size: 16px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 ul {
     padding-left: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+li strong {
+    color: #38bdf8;
 }
 
 .politica {
-    background-color: #f8fafc;
-    border-left: 4px solid #2b5282;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    background-color: #0f172a;
+    border-left: 4px solid #00f2fe;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.politica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 242, 254, 0.15);
+}
+
+.politica h3 {
+    color: #00f2fe;
+    margin-top: 0;
+    font-size: 18px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 15px;
+    margin: 20px 0;
+    background-color: #0f172a;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 th, td {
-    border: 1px solid #cbd5e0;
-    padding: 8px 12px;
+    padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #1e293b;
 }
 
 th {
-    background-color: #edf2f7;
-    color: #2d3748;
+    background-color: #1e293b;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+td {
+    color: #cbd5e1;
+}
+
+tr:hover {
+    background-color: #1a2436;
 }
 
 footer {
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
-    font-size: 12px;
-    color: #718096;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 15px;
-  }
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+}
