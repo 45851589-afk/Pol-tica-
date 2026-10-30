@@ -4,113 +4,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurLux Games & Software</title>
+    <title>TurLux | Videojuegos en Linux</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <header>
-        <h1>TurLux</h1>
-        <p>Videojuegos y software para Linux</p>
+    <header class="encabezado">
+        <div class="cabecera">
+            <a class="logo" href="#inicio">TurLux<span>Linux</span></a>
+            <p>Videojuegos, tecnología y software libre</p>
+        </div>
     </header>
 
-    <nav>
+    <nav class="menu">
         <a href="#inicio">Inicio</a>
+        <a href="#noticias">Noticias</a>
         <a href="#juegos">Videojuegos</a>
         <a href="#software">Software</a>
+        <a href="#guias">Guías</a>
     </nav>
 
-    <main>
-        <section id="inicio" class="bienvenida">
-            <h2>¡Bienvenido a TurLux!</h2>
-            <p>
-                Descubrí videojuegos y programas para tu sistema Linux.
-                Encontrá tus favoritos y accedé a sus páginas oficiales
-                para descargarlos.
-            </p>
-        </section>
+    <main class="contenido" id="inicio">
 
-        <section id="juegos">
-            <h2>Videojuegos</h2>
-
-            <div class="catalogo">
-
-                <article class="producto">
-                    <h3>SuperTuxKart</h3>
-                    <p>Un divertido juego de carreras con personajes de Linux.</p>
-                    <a class="boton"
-                       href="https://supertuxkart.net/Download"
-                       target="_blank" rel="noopener noreferrer">
-                        Descargar
-                    </a>
-                </article>
-
-                <article class="producto">
-                    <h3>0 A.D.</h3>
-                    <p>Un videojuego de estrategia ambientado en la historia antigua.</p>
-                    <a class="boton"
-                       href="https://play0ad.com/download/"
-                       target="_blank" rel="noopener noreferrer">
-                        Descargar
-                    </a>
-                </article>
-
-                <article class="producto">
-                    <h3>Steam</h3>
-                    <p>Una plataforma para encontrar y jugar videojuegos en Linux.</p>
-                    <a class="boton"
-                       href="https://store.steampowered.com/about/"
-                       target="_blank" rel="noopener noreferrer">
-                        Descargar
-                    </a>
-                </article>
-
+        <section class="principal">
+            <div class="destacado">
+                <span class="etiqueta">DESTACADO</span>
+                <h1>El mundo de los videojuegos en Linux</h1>
+                <p>
+                    Descubrí novedades, juegos, herramientas y consejos
+                    para disfrutar de tus videojuegos favoritos en Linux.
+                </p>
+                <a class="boton" href="#noticias">Ver publicaciones</a>
             </div>
+
+            <section id="noticias">
+                <h2 class="titulo-seccion">Últimas publicaciones</h2>
+
+                <article class="noticia">
+                    <div class="imagen imagen-juegos">
+                        <span>GAMING</span>
+                    </div>
+                    <div class="texto-noticia">
+                        <p class="categoria">VIDEOJUEGOS</p>
+                        <h3>Los videojuegos y el crecimiento de Linux</h3>
+                        <p>
+                            Conocé cómo evoluciona el mundo de los juegos
+                            en sistemas GNU/Linux.
+                        </p>
+                        <span class="fecha">Noticias · TurLux</span>
+                    </div>
+                </article>
+
+                <article class="noticia">
+                    <div class="imagen imagen-sistema">
+                        <span>LINUX</span>
+                    </div>
+                    <div class="texto-noticia">
+                        <p class="categoria">TECNOLOGÍA</p>
+                        <h3>Herramientas útiles para jugar en Linux</h3>
+                        <p>
+                            Un repaso por las herramientas que ayudan a
+                            configurar y mejorar la experiencia de juego.
+                        </p>
+                        <span class="fecha">Software · TurLux</span>
+                    </div>
+                </article>
+
+                <article class="noticia">
+                    <div class="imagen imagen-guias">
+                        <span>GUÍAS</span>
+                    </div>
+                    <div class="texto-noticia">
+                        <p class="categoria">TUTORIALES</p>
+                        <h3>Primeros pasos para jugar en Linux</h3>
+                        <p>
+                            Consejos básicos para comenzar a jugar desde
+                            una distribución Linux.
+                        </p>
+                        <span class="fecha">Guías · TurLux</span>
+                    </div>
+                </article>
+            </section>
         </section>
 
-        <section id="software">
-            <h2>Software</h2>
+        <aside class="lateral">
 
-            <div class="catalogo">
+            <section class="panel">
+                <h2>Categorías</h2>
+                <a href="#noticias">Noticias</a>
+                <a href="#juegos">Videojuegos</a>
+                <a href="#software">Software</a>
+                <a href="#guias">Guías y tutoriales</a>
+            </section>
 
-                <article class="producto">
-                    <h3>GIMP</h3>
-                    <p>Programa gratuito para editar imágenes y fotografías.</p>
-                    <a class="boton"
-                       href="https://www.gimp.org/downloads/"
-                       target="_blank" rel="noopener noreferrer">
-                        Descargar
-                    </a>
-                </article>
+            <section class="panel" id="juegos">
+                <h2>Videojuegos</h2>
+                <p>Información y novedades sobre juegos compatibles con Linux.</p>
+            </section>
 
-                <article class="producto">
-                    <h3>VLC Media Player</h3>
-                    <p>Reproductor multimedia para escuchar música y ver vídeos.</p>
-                    <a class="boton"
-                       href="https://www.videolan.org/vlc/"
-                       target="_blank" rel="noopener noreferrer">
-                        Descargar
-                    </a>
-                </article>
+            <section class="panel" id="software">
+                <h2>Software</h2>
+                <p>Aplicaciones, herramientas y programas para tu sistema.</p>
+            </section>
 
-                <article class="producto">
-                    <h3>Blender</h3>
-                    <p>Herramienta para crear modelos 3D, animaciones y gráficos.</p>
-                    <a class="boton"
-                       href="https://www.blender.org/download/"
-                       target="_blank" rel="noopener noreferrer">
-                        Descargar
-                    </a>
-                </article>
+            <section class="panel" id="guias">
+                <h2>Guías</h2>
+                <p>Aprendé a configurar tu sistema y aprovechar Linux.</p>
+            </section>
 
-            </div>
-        </section>
+        </aside>
+
     </main>
 
     <footer>
-        <p>© 2026 TurLux Games & Software S.A.</p>
-        <p>Videojuegos y programas para Linux</p>
+        <h2>TurLux Linux</h2>
+        <p>Un espacio dedicado a los videojuegos y al software en Linux.</p>
+        <p class="copyright">© 2026 TurLux Games &amp; Software S.A.</p>
     </footer>
 
 </body>
-</html>
+                    </html>
+                    
