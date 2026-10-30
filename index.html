@@ -1,127 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurLux | Videojuegos en Linux</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TurLux - Políticas & Guías de Seguridad</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="encabezado">
-        <div class="cabecera">
-            <a class="logo" href="#inicio">TurLux<span>Linux</span></a>
-            <p>Videojuegos, tecnología y software libre</p>
-        </div>
+  <!-- Barra de Navegación Lateral (Sidebar) -->
+  <aside class="sidebar">
+    <div class="brand">
+      <i class="fa-brands fa-linux logo-icon"></i>
+      <h2>TurLux <span>Security</span></h2>
+    </div>
+    <nav class="menu">
+      <a href="#overview" class="menu-item active"><i class="fa-solid fa-chart-pie"></i> Resumen</a>
+      <a href="#guias" class="menu-item"><i class="fa-solid fa-book-bookmark"></i> Guías & Directrices</a>
+      <a href="#activos" class="menu-item"><i class="fa-solid fa-server"></i> Inventario de Activos</a>
+      <a href="#amenazas" class="menu-item"><i class="fa-solid fa-shield-cat"></i> Amenazas & Riesgos</a>
+      <a href="#controles" class="menu-item"><i class="fa-solid fa-lock"></i> Controles de Acceso</a>
+    </nav>
+    <div class="sidebar-footer">
+      <small>v2.4 - Linux Native Dev</small>
+    </div>
+  </aside>
+
+  <!-- Contenido Principal -->
+  <main class="main-content">
+    
+    <!-- Encabezado Superior -->
+    <header class="top-header">
+      <div class="header-title">
+        <h1>Centro de Documentación y Políticas de Seguridad</h1>
+        <p>Directrices técnicas y estándares para el desarrollo nativo en Linux</p>
+      </div>
+      <div class="status-badge">
+        <span class="dot"></span> Sistema Protegido
+      </div>
     </header>
 
-    <nav class="menu">
-        <a href="#inicio">Inicio</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#juegos">Videojuegos</a>
-        <a href="#software">Software</a>
-        <a href="#guias">Guías</a>
-    </nav>
+    <!-- Sección Overview / Métrica rápida -->
+    <section id="overview" class="cards-grid">
+      <div class="card stat-card">
+        <i class="fa-solid fa-code-branch icon"></i>
+        <div>
+          <h3>Código Fuente</h3>
+          <p>Activo Crítico Nivel 1</p>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <i class="fa-solid fa-key icon"></i>
+        <div>
+          <h3>Llaves SSH & GPG</h3>
+          <p>Cifrado Activo</p>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <i class="fa-solid fa-terminal icon"></i>
+        <div>
+          <h3>Entornos Linux</h3>
+          <p>Hardening Aplicado</p>
+        </div>
+      </div>
+    </section>
 
-    <main class="contenido" id="inicio">
+    <!-- Sección Guías y Directrices -->
+    <section id="guias" class="section-container">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-book-bookmark"></i> Guías de Protección y Buenas Prácticas</h2>
+        <p>Protocolos normativos obligatorios para todo el equipo de desarrollo de TurLux.</p>
+      </div>
 
-        <section class="principal">
-            <div class="destacado">
-                <span class="etiqueta">DESTACADO</span>
-                <h1>El mundo de los videojuegos en Linux</h1>
-                <p>
-                    Descubrí novedades, juegos, herramientas y consejos
-                    para disfrutar de tus videojuegos favoritos en Linux.
-                </p>
-                <a class="boton" href="#noticias">Ver publicaciones</a>
-            </div>
+      <div class="accordion-list">
+        <details class="accordion-item" open>
+          <summary>
+            <span class="accordion-title"><i class="fa-solid fa-user-shield"></i> Gestión de Usuarios y Permisos Minimizados</span>
+            <span class="badge badge-high">Requisito Base</span>
+          </summary>
+          <div class="accordion-content">
+            <p>Se aplica el principio de menor privilegio (PoLP). Ningún desarrollador opera bajo la cuenta <code>root</code> para tareas habituales. La elevación de privilegios se realiza mediante <code>sudo</code> auditado y con autenticación multifactor (MFA).</p>
+          </div>
+        </details>
 
-            <section id="noticias">
-                <h2 class="titulo-seccion">Últimas publicaciones</h2>
+        <details class="accordion-item">
+          <summary>
+            <span class="accordion-title"><i class="fa-solid fa-vault"></i> Resguardo de Credenciales y Claves Privadas</span>
+            <span class="badge badge-medium">Seguridad Operativa</span>
+          </summary>
+          <div class="accordion-content">
+            <p>Queda estrictamente prohibido hardcodear contraseñas, tokens de API o claves SSH en los repositorios de código Git. Se debe hacer uso exclusivo de variables de entorno cifradas y gestores de secretos autorizados.</p>
+          </div>
+        </details>
 
-                <article class="noticia">
-                    <div class="imagen imagen-juegos">
-                        <span>GAMING</span>
-                    </div>
-                    <div class="texto-noticia">
-                        <p class="categoria">VIDEOJUEGOS</p>
-                        <h3>Los videojuegos y el crecimiento de Linux</h3>
-                        <p>
-                            Conocé cómo evoluciona el mundo de los juegos
-                            en sistemas GNU/Linux.
-                        </p>
-                        <span class="fecha">Noticias · TurLux</span>
-                    </div>
-                </article>
+        <details class="accordion-item">
+          <summary>
+            <span class="accordion-title"><i class="fa-solid fa-floppy-disk"></i> Estrategia de Copias de Seguridad (Backups)</span>
+            <span class="badge badge-high">Continuidad</span>
+          </summary>
+          <div class="accordion-content">
+            <p>Implementación de la regla 3-2-1 para copias de seguridad: tres copias de los datos, dos medios distintos y una copia cifrada fuera de la instalación local (Offsite) con pruebas periódicas de restauración.</p>
+          </div>
+        </details>
+      </div>
+    </section>
 
-                <article class="noticia">
-                    <div class="imagen imagen-sistema">
-                        <span>LINUX</span>
-                    </div>
-                    <div class="texto-noticia">
-                        <p class="categoria">TECNOLOGÍA</p>
-                        <h3>Herramientas útiles para jugar en Linux</h3>
-                        <p>
-                            Un repaso por las herramientas que ayudan a
-                            configurar y mejorar la experiencia de juego.
-                        </p>
-                        <span class="fecha">Software · TurLux</span>
-                    </div>
-                </article>
+    <!-- Sección Inventario de Activos -->
+    <section id="activos" class="section-container">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-server"></i> Clasificación de Activos de Información</h2>
+      </div>
+      
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Activo</th>
+              <th>Nivel de Criticidad</th>
+              <th>Medida de Protección</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Software</strong></td>
+              <td>Repositorios de Código (Juegos/Tools)</td>
+              <td><span class="status critical">Crítico</span></td>
+              <td>Firmado GPG y Control de Ramas</td>
+            </tr>
+            <tr>
+              <td><strong>Infraestructura</strong></td>
+              <td>Servidores de Compilación Linux</td>
+              <td><span class="status high">Alto</span></td>
+              <td>Firewall estricto / Parches día 0</td>
+            </tr>
+            <tr>
+              <td><strong>Credenciales</strong></td>
+              <td>Claves Privadas SSH y Certificados</td>
+              <td><span class="status critical">Crítico</span></td>
+              <td>Cifrado Hardware / Vault</td>
+            </tr>
+            <tr>
+              <td><strong>Datos</strong></td>
+              <td>Bases de Datos y Telemetría</td>
+              <td><span class="status medium">Medio</span></td>
+              <td>Cifrado en Reposo (AES-256)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-                <article class="noticia">
-                    <div class="imagen imagen-guias">
-                        <span>GUÍAS</span>
-                    </div>
-                    <div class="texto-noticia">
-                        <p class="categoria">TUTORIALES</p>
-                        <h3>Primeros pasos para jugar en Linux</h3>
-                        <p>
-                            Consejos básicos para comenzar a jugar desde
-                            una distribución Linux.
-                        </p>
-                        <span class="fecha">Guías · TurLux</span>
-                    </div>
-                </article>
-            </section>
-        </section>
+    <!-- Sección Amenazas y Riesgos -->
+    <section id="amenazas" class="section-container">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-shield-cat"></i> Análisis de Amenazas y Riesgos</h2>
+      </div>
 
-        <aside class="lateral">
+      <div class="grid-2col">
+        <div class="card feature-card">
+          <div class="card-icon"><i class="fa-solid fa-user-ninja"></i></div>
+          <h3>Ingeniería Social & Phishing</h3>
+          <p><strong>Riesgo:</strong> Robo de credenciales de acceso a la red interna.</p>
+          <p><strong>Mitigación:</strong> Autenticación FIDO2/Hardware y capacitaciones trimestrales antiphishing.</p>
+        </div>
 
-            <section class="panel">
-                <h2>Categorías</h2>
-                <a href="#noticias">Noticias</a>
-                <a href="#juegos">Videojuegos</a>
-                <a href="#software">Software</a>
-                <a href="#guias">Guías y tutoriales</a>
-            </section>
+        <div class="card feature-card">
+          <div class="card-icon"><i class="fa-solid fa-bug"></i></div>
+          <h3>Inyección de Código & Dependencias</h3>
+          <p><strong>Riesgo:</strong> Vulnerabilidades en paquetes nativos Linux de terceros.</p>
+          <p><strong>Mitigación:</strong> Auditoría automatizada de software (SAST) y análisis de librerías.</p>
+        </div>
+      </div>
+    </section>
 
-            <section class="panel" id="juegos">
-                <h2>Videojuegos</h2>
-                <p>Información y novedades sobre juegos compatibles con Linux.</p>
-            </section>
-
-            <section class="panel" id="software">
-                <h2>Software</h2>
-                <p>Aplicaciones, herramientas y programas para tu sistema.</p>
-            </section>
-
-            <section class="panel" id="guias">
-                <h2>Guías</h2>
-                <p>Aprendé a configurar tu sistema y aprovechar Linux.</p>
-            </section>
-
-        </aside>
-
-    </main>
-
-    <footer>
-        <h2>TurLux Linux</h2>
-        <p>Un espacio dedicado a los videojuegos y al software en Linux.</p>
-        <p class="copyright">© 2026 TurLux Games &amp; Software S.A.</p>
-    </footer>
+  </main>
 
 </body>
-                    </html>
-                    
+                                                       </html>
+    
