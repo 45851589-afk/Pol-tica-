@@ -3,408 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurLux Games - Políticas de Seguridad Informática</title>
+    <title>TurLux Games & Software S.A. - Políticas de Seguridad</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Móvil -->
-    <header class="mobile-header">
+    <!-- Menú de navegación lateral -->
+    <aside class="sidebar">
         <div class="brand">
-            <span class="brand-icon">🛡️</span>
-            <h1>TurLux<span>Games</span></h1>
+            <h2>TurLux <span>Games</span></h2>
+            <p>Seguridad Informática</p>
         </div>
-        <button class="toggle-btn" id="toggleNav">☰</button>
-    </header>
-
-    <!-- Menú de Navegación Lateral -->
-    <aside id="sidebar">
-        <div class="brand">
-            <span class="brand-icon">🛡️</span>
-            <h1>TurLux<span>Games</span></h1>
-        </div>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <button class="active" onclick="switchTab('empresa', this)">
-                    <span class="icon">🏢</span> 1. Empresa
-                </button>
-            </li>
-            <li class="nav-item">
-                <button onclick="switchTab('activos', this)">
-                    <span class="icon">📦</span> 2a. Activos e Info
-                </button>
-            </li>
-            <li class="nav-item">
-                <button onclick="switchTab('amenazas', this)">
-                    <span class="icon">⚠️</span> 2b. Amenazas y Riesgos
-                </button>
-            </li>
-            <li class="nav-item">
-                <button onclick="switchTab('perfiles', this)">
-                    <span class="icon">👥</span> 2c. Perfiles de Usuario
-                </button>
-            </li>
-            <li class="nav-item">
-                <button onclick="switchTab('requisitos', this)">
-                    <span class="icon">🔒</span> 2d. Requisitos CIA
-                </button>
-            </li>
-            <li class="nav-item">
-                <button onclick="switchTab('politicas', this)">
-                    <span class="icon">📜</span> 3. Políticas Específicas
-                </button>
-            </li>
-        </ul>
+        <nav class="nav-menu">
+            <a href="#empresa" class="nav-link">1. Empresa</a>
+            <a href="#activos" class="nav-link">2a. Activos e Info</a>
+            <a href="#amenazas" class="nav-link">2b. Amenazas y Riesgos</a>
+            <a href="#perfiles" class="nav-link">2c. Perfiles de Usuario</a>
+            <a href="#requisitos" class="nav-link">2d. Requisitos CIA</a>
+            <a href="#politicas" class="nav-link">3. Políticas Específicas</a>
+        </nav>
     </aside>
 
     <!-- Contenido Principal -->
-    <main>
-        
+    <main class="main-content">
+
         <!-- 1. Presentación de la Empresa -->
-        <section id="empresa" class="tab-content active">
+        <section id="empresa" class="content-section">
             <div class="section-header">
-                <h2><span class="icon">🏢</span> Presentación de la Empresa</h2>
-                <p>Información general y modelo de negocio de la organización.</p>
+                <h2>1. Presentación de la Empresa</h2>
+                <p>Información general sobre el modelo de negocio y operaciones de la empresa.</p>
             </div>
-            <div class="grid-3">
+            <div class="cards-grid grid-3">
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-green">🪪</div>
-                        <div class="card-title">Razón Social</div>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>TurLux Games & Software S.A.</strong></p>
-                    </div>
+                    <h3>Razón Social</h3>
+                    <p><strong>TurLux Games & Software S.A.</strong></p>
                 </div>
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-blue">💻</div>
-                        <div class="card-title">Actividad Principal</div>
-                    </div>
-                    <div class="card-body">
-                        <p>Desarrollo de software y producción de videojuegos nativos para sistemas operativos Linux.</p>
-                    </div>
+                    <h3>Actividad Principal</h3>
+                    <p>Desarrollo de software y producción de videojuegos nativos para sistemas operativos Linux.</p>
                 </div>
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-purple">📈</div>
-                        <div class="card-title">Modelo de Negocio</div>
-                    </div>
-                    <div class="card-body">
-                        <p>Creación de aplicaciones a medida, motores gráficos y distribución digital de programas y juegos mediante plataforma web propia y repositorios especializados.</p>
-                    </div>
+                    <h3>Modelo de Negocio</h3>
+                    <p>Creación de aplicaciones a medida, motores gráficos y distribución digital de programas y juegos mediante plataforma web propia y repositorios especializados.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 2a. Activos e Información Sensible -->
-        <section id="activos" class="tab-content">
+        <!-- 2a. Activos a Proteger e Información Sensible -->
+        <section id="activos" class="content-section">
             <div class="section-header">
-                <h2><span class="icon">📦</span> Activos e Información Sensible</h2>
-                <p>Elementos clave que requieren protección dentro de la infraestructura.</p>
+                <h2>2a. Diagnóstico: Activos e Información Sensible</h2>
+                <p>Elementos críticos identificados dentro de la infraestructura tecnológica.</p>
             </div>
-            <div class="grid-2">
+            <div class="cards-grid grid-2">
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-blue">🖥️</div>
-                        <div class="card-title">Activos a Proteger</div>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span class="bullet-check">✓</span> Repositorios de código fuente de videojuegos y software nativo.</li>
-                            <li><span class="bullet-check">✓</span> Servidores de integración continua y entornos de compilación.</li>
-                            <li><span class="bullet-check">✓</span> Servidores de almacenamiento y distribución de contenidos digitales.</li>
-                            <li><span class="bullet-check">✓</span> Estaciones de trabajo del personal de desarrollo, diseño y administración.</li>
-                            <li><span class="bullet-check">✓</span> Equipos de red, enrutadores y firewalls perimetrales.</li>
-                        </ul>
-                    </div>
+                    <h3 class="title-blue">Activos a Proteger</h3>
+                    <ul class="styled-list">
+                        <li>Repositorios de código fuente de videojuegos y software nativo.</li>
+                        <li>Servidores de integración continua y entornos de compilación.</li>
+                        <li>Servidores de almacenamiento y distribución de contenidos digitales.</li>
+                        <li>Estaciones de trabajo del personal de desarrollo, diseño y administración.</li>
+                        <li>Equipos de red, enrutadores y firewalls perimetrales.</li>
+                    </ul>
                 </div>
-
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-purple">🔑</div>
-                        <div class="card-title">Información Sensible</div>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span class="bullet-key">🔑</span> Claves privadas de firmado digital de paquetes y ejecutables.</li>
-                            <li><span class="bullet-key">🔑</span> Credenciales de acceso a servidores de infraestructura y claves SSH.</li>
-                            <li><span class="bullet-key">🔑</span> Tokens de autenticación y claves API para servicios integrados.</li>
-                            <li><span class="bullet-key">🔑</span> Bases de datos de usuarios, clientes registrados y transacciones.</li>
-                            <li><span class="bullet-key">🔑</span> Datos personales de empleados conforme a normativa legal vigente.</li>
-                        </ul>
-                    </div>
+                    <h3 class="title-purple">Información Sensible</h3>
+                    <ul class="styled-list">
+                        <li>Claves privadas de firmado digital de paquetes y ejecutables.</li>
+                        <li>Credenciales de acceso a servidores de infraestructura y claves SSH.</li>
+                        <li>Tokens de autenticación y claves API para servicios integrados.</li>
+                        <li>Bases de datos de usuarios, clientes registrados y registros de transacciones.</li>
+                        <li>Datos personales de los empleados conforme a la normativa legal vigente.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- 2b. Amenazas, Vulnerabilidades y Riesgos -->
-        <section id="amenazas" class="tab-content">
+        <section id="amenazas" class="content-section">
             <div class="section-header">
-                <h2><span class="icon">⚠️</span> Amenazas, Vulnerabilidades y Riesgos</h2>
-                <p>Diagnóstico de riesgos y factores de exposición de TurLux.</p>
+                <h2>2b. Amenazas, Vulnerabilidades y Riesgos</h2>
+                <p>Evaluación de factores de riesgo y exposición operativa.</p>
             </div>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-red">🐛</div>
-                        <div class="card-title">Amenazas</div>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span class="bullet-danger">✖</span> Ingeniería social y suplantación de identidad.</li>
-                            <li><span class="bullet-danger">✖</span> Inyección de código malicioso en la cadena de suministro.</li>
-                            <li><span class="bullet-danger">✖</span> Robo de credenciales administrativas.</li>
-                            <li><span class="bullet-danger">✖</span> Infección por ransomware (cifrado de datos).</li>
-                            <li><span class="bullet-danger">✖</span> Interrupción por ataques DoS/DDoS.</li>
-                        </ul>
-                    </div>
+            <div class="cards-grid grid-3">
+                <div class="card border-red">
+                    <h3 class="title-red">Amenazas</h3>
+                    <ul class="styled-list">
+                        <li>Ataques de ingeniería social y suplantación de identidad dirigidos al personal.</li>
+                        <li>Inyección de código malicioso en la cadena de suministro de software.</li>
+                        <li>Compromiso o robo de credenciales administrativas.</li>
+                        <li>Infección por programas maliciosos de cifrado o bloqueo de datos (Ransomware).</li>
+                        <li>Interrupción de servicios por ataques de denegación de servicio (DoS/DDoS).</li>
+                    </ul>
                 </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-amber">🔓</div>
-                        <div class="card-title">Vulnerabilidades</div>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span class="bullet-warning">⚠️</span> Gestión deficiente y baja complejidad de claves.</li>
-                            <li><span class="bullet-warning">⚠️</span> Bibliotecas de software de terceros desactualizadas.</li>
-                            <li><span class="bullet-warning">⚠️</span> Inclusión involuntaria de secretos en el código.</li>
-                            <li><span class="bullet-warning">⚠️</span> Ausencia de 2FA en servicios internos.</li>
-                            <li><span class="bullet-warning">⚠️</span> Asignación excesiva de privilegios.</li>
-                        </ul>
-                    </div>
+                <div class="card border-amber">
+                    <h3 class="title-amber">Vulnerabilidades</h3>
+                    <ul class="styled-list">
+                        <li>Gestión deficiente de credenciales y uso de claves de acceso con complejidad insuficiente.</li>
+                        <li>Presencia de bibliotecas de software de terceros sin actualizar.</li>
+                        <li>Inclusión por descuido de secretos dentro del código fuente.</li>
+                        <li>Ausencia de autenticación de doble factor (2FA) en servicios internos.</li>
+                        <li>Asignación excesiva de privilegios a cuentas de usuario.</li>
+                    </ul>
                 </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-purple">💥</div>
-                        <div class="card-title">Riesgos</div>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><span class="bullet-risk">☣</span> Filtración o robo de propiedad intelectual.</li>
-                            <li><span class="bullet-risk">☣</span> Publicación de ejecutables alterados con malware.</li>
-                            <li><span class="bullet-risk">☣</span> Interrupción prolongada de producción y descargas.</li>
-                            <li><span class="bullet-risk">☣</span> Pérdida de integridad en base de datos de clientes.</li>
-                            <li><span class="bullet-risk">☣</span> Daño reputacional severo e incumplimiento legal.</li>
-                        </ul>
-                    </div>
+                <div class="card border-purple">
+                    <h3 class="title-purple">Riesgos</h3>
+                    <ul class="styled-list">
+                        <li>Filtración o robo de la propiedad intelectual antes de su comercialización.</li>
+                        <li>Publicación y distribución involuntaria de ejecutables alterados con código dañino.</li>
+                        <li>Interrupción prolongada de la línea de producción y de los servidores de descarga.</li>
+                        <li>Pérdida de integridad en las bases de datos de clientes e historial de compras.</li>
+                        <li>Daño reputacional severo e incumplimiento de acuerdos comerciales o legales.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- 2c. Perfiles de Usuarios -->
-        <section id="perfiles" class="tab-content">
+        <section id="perfiles" class="content-section">
             <div class="section-header">
-                <h2><span class="icon">👥</span> Perfiles de Usuarios</h2>
-                <p>Niveles de acceso y responsabilidades por rol dentro de la empresa.</p>
+                <h2>2c. Perfiles de Usuarios</h2>
+                <p>Niveles de acceso y responsabilidades asignadas según el rol corporativo.</p>
             </div>
-            <div class="grid-2">
+            <div class="cards-grid grid-2">
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-blue">👨‍💻</div>
-                        <div class="card-title">Programadores</div>
-                    </div>
-                    <div class="card-body">
-                        <p>Personal encargado de la redacción de código y algoritmos. Disponen de acceso limitado a los repositorios asociados a sus proyectos asignados.</p>
-                    </div>
+                    <h3>Programadores</h3>
+                    <p>Personal encargado de la redacción de código y algoritmos. Disponen de acceso limitado a los repositorios asociados a sus proyectos asignados.</p>
                 </div>
-
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-amber">🎨</div>
-                        <div class="card-title">Artistas y Diseñadores</div>
-                    </div>
-                    <div class="card-body">
-                        <p>Personal creativo dedicado al modelado, texturizado, audio y animación. Acceden únicamente a los servidores de almacenamiento de recursos gráficos y sonoros.</p>
-                    </div>
+                    <h3>Artistas y Diseñadores</h3>
+                    <p>Personal creativo dedicado al modelado, texturizado, audio y animación. Acceden únicamente a los servidores de almacenamiento de recursos gráficos y sonoros.</p>
                 </div>
-
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-red">🛠️</div>
-                        <div class="card-title">Administradores de Sistemas</div>
-                    </div>
-                    <div class="card-body">
-                        <p>Personal técnico responsable de la infraestructura y ciberseguridad. Poseen privilegios elevados gestionados mediante control estricto y auditoría continua.</p>
-                    </div>
+                    <h3>Administradores de Sistemas</h3>
+                    <p>Personal técnico responsable de la infraestructura y ciberseguridad. Poseen privilegios elevados gestionados mediante control estricto y auditoría continua.</p>
                 </div>
-
                 <div class="card">
-                    <div class="card-header">
-                        <div class="card-icon icon-green">💼</div>
-                        <div class="card-title">Personal Administrativo</div>
-                    </div>
-                    <div class="card-body">
-                        <p>Empleados enfocados en gestión financiera, recursos humanos y legales. Acceden exclusivamente a las aplicaciones comerciales y de gestión contable.</p>
-                    </div>
+                    <h3>Personal Administrativo</h3>
+                    <p>Empleados enfocados en gestión financiera, recursos humanos y legales. Acceden exclusivamente a las aplicaciones comerciales y de gestión contable.</p>
                 </div>
-
-                <div class="card full-width">
-                    <div class="card-header">
-                        <div class="card-icon icon-purple">🎮</div>
-                        <div class="card-title">Usuarios Finales</div>
-                    </div>
-                    <div class="card-body">
-                        <p>Jugadores y clientes que acceden a la plataforma web corporativa para la adquisición y descarga de software. Se encuentran completamente aislados de la red privada de la empresa.</p>
-                    </div>
+                <div class="card card-full">
+                    <h3>Usuarios Finales</h3>
+                    <p>Jugadores y clientes que acceden a la plataforma web corporativa para la adquisición y descarga de software. Se encuentran completamente aislados de la red privada de la empresa.</p>
                 </div>
             </div>
         </section>
 
         <!-- 2d. Requisitos Generales de Seguridad -->
-        <section id="requisitos" class="tab-content">
+        <section id="requisitos" class="content-section">
             <div class="section-header">
-                <h2><span class="icon">🔒</span> Requisitos Generales de Seguridad</h2>
-                <p>Pilares fundamentales del modelo de seguridad (Triada CIA).</p>
+                <h2>2d. Requisitos Generales de Seguridad</h2>
+                <p>Principios fundamentales para la protección de la información (Triada CIA).</p>
             </div>
-            <div class="req-grid">
-                <div class="req-card confidentiality">
-                    <h3>👁️ Confidencialidad</h3>
+            <div class="cards-grid grid-3">
+                <div class="card req-box border-blue">
+                    <h3 class="title-blue">Confidencialidad</h3>
                     <p>Garantizar que los activos digitales y la propiedad intelectual sean accesibles únicamente por el personal explícitamente autorizado.</p>
                 </div>
-                <div class="req-card integrity">
-                    <h3>🛡️ Integridad</h3>
+                <div class="card req-box border-green">
+                    <h3 class="title-green">Integridad</h3>
                     <p>Preservar la exactitud del código fuente y de los ejecutables distribuidos, evitando modificaciones no autorizadas durante el desarrollo o la transmisión.</p>
                 </div>
-                <div class="req-card availability">
-                    <h3>⚙️ Disponibilidad</h3>
+                <div class="card req-box border-purple">
+                    <h3 class="title-purple">Disponibilidad</h3>
                     <p>Asegurar la continuidad operativa de los entornos de producción, servidores Git y plataformas de descarga.</p>
                 </div>
             </div>
         </section>
 
         <!-- 3. Políticas Específicas de Seguridad -->
-        <section id="politicas" class="tab-content">
+        <section id="politicas" class="content-section">
             <div class="section-header">
-                <h2><span class="icon">📜</span> Políticas Específicas de Seguridad</h2>
-                <p>Normativas detalladas de cumplimiento obligatorio.</p>
+                <h2>3. Políticas Específicas de Seguridad</h2>
+                <p>Normativas internas de cumplimiento obligatorio para todo el personal.</p>
             </div>
 
             <!-- Política 1 -->
-            <div class="policy-card">
-                <div class="policy-banner">
-                    <div class="policy-title">
-                        🔐 Política 1: Control de Acceso e Identificación
-                    </div>
-                    <span class="badge badge-green">Acceso y Autenticación</span>
+            <article class="policy-card">
+                <div class="policy-header">
+                    <h3>Política 1: Control de Acceso e Identificación de Usuarios</h3>
+                    <span class="badge badge-green">Acceso</span>
                 </div>
-                <div class="policy-details">
-                    <p><strong>Objetivo:</strong> Normar el acceso a los recursos tecnológicos corporativos para prevenir ingresos no autorizados y mitigar la exposición de los sistemas críticos.</p>
+                <div class="policy-body">
+                    <p class="policy-desc"><strong>Objetivo:</strong> Normar el acceso a los recursos tecnológicos corporativos para prevenir ingresos no autorizados y mitigar la exposición de los sistemas críticos.</p>
                     <div class="policy-meta">
-                        <div class="meta-item">
-                            <strong>Alcance</strong>
-                            <span>Totalidad de empleados, colaboradores externos y servicios que requieran acceso a la infraestructura.</span>
-                        </div>
-                        <div class="meta-item">
-                            <strong>Responsables</strong>
-                            <span>Área de Administración de Sistemas (gestión técnica) y cada usuario (custodia de credenciales).</span>
-                        </div>
+                        <div><strong>Alcance:</strong> Aplica a la totalidad de los empleados, colaboradores externos y servicios que requieran acceso a la infraestructura de la empresa.</div>
+                        <div><strong>Responsables:</strong> Área de Administración de Sistemas (gestión técnica) y cada usuario (custodia de credenciales).</div>
                     </div>
-                    <div class="policy-section">
-                        <h4>📋 Reglas de Cumplimiento</h4>
-                        <ul>
-                            <li>Cada cuenta debe estar asociada a un único usuario responsable; prohibido uso de cuentas compartidas.</li>
-                            <li>Contraseñas con longitud mínima de 12 caracteres (mayúsculas, minúsculas, números y caracteres especiales).</li>
-                            <li>Uso obligatorio de claves SSH personales cifradas para todo acceso remoto a servidores Linux.</li>
-                            <li>Inicio de sesión con usuario root deshabilitado (usar elevación de privilegios identificable).</li>
-                            <li>2FA obligatorio en la totalidad de plataformas institucionales.</li>
-                        </ul>
-                    </div>
-                    <div class="policy-section">
-                        <h4>💻 Controles y Procedimientos</h4>
-                        <p><strong>Controles:</strong> Validación automatizada de contraseñas, bloqueo tras 5 intentos fallidos, registro centralizado de auditoría de comandos.<br>
-                        <strong>Incumplimientos:</strong> Revocación inmediata de credenciales, notificación formal a jefatura e inicio de procedimiento disciplinario.<br>
-                        <strong>Revisión:</strong> Auditoría trimestral de matriz de accesos y revisión anual del texto de la política.</p>
-                    </div>
+                    <h4>Reglas de Cumplimiento:</h4>
+                    <ul class="styled-list">
+                        <li>Cada cuenta debe estar asociada a un único usuario responsable; queda prohibido el uso de cuentas compartidas.</li>
+                        <li>Las contraseñas deben contener una longitud mínima de doce caracteres, integrando mayúsculas, minúsculas, números y caracteres especiales.</li>
+                        <li>Uso obligatorio de claves SSH personales cifradas para todo acceso remoto a servidores Linux.</li>
+                        <li>Inicio de sesión con usuario root deshabilitado; tareas administrativas mediante elevación de privilegios registrada.</li>
+                        <li>Autenticación de doble factor (2FA) obligatoria en la totalidad de las plataformas institucionales.</li>
+                    </ul>
+                    <h4>Controles y Procedimientos:</h4>
+                    <p><strong>Controles:</strong> Validación automatizada de complejidad de claves, bloqueo tras 5 intentos fallidos y registro centralizado de auditoría sobre comandos con privilegios elevados.</p>
+                    <p><strong>Incumplimiento:</strong> Revocación inmediata de credenciales, notificación formal a la jefatura e inicio del procedimiento disciplinario.</p>
+                    <p><strong>Revisión:</strong> Auditoría trimestral de la matriz de accesos y revisión anual del texto de la política.</p>
                 </div>
-            </div>
+            </article>
 
             <!-- Política 2 -->
-            <div class="policy-card">
-                <div class="policy-banner">
-                    <div class="policy-title">
-                        🌿 Política 2: Desarrollo Seguro y Código Fuente
-                    </div>
+            <article class="policy-card">
+                <div class="policy-header">
+                    <h3>Política 2: Desarrollo Seguro y Gestión del Código Fuente</h3>
                     <span class="badge badge-blue">Desarrollo</span>
                 </div>
-                <div class="policy-details">
-                    <p><strong>Objetivo:</strong> Establecer pautas de programación que garanticen la construcción de software libre de vulnerabilidades y prevengan la exposición de información confidencial.</p>
+                <div class="policy-body">
+                    <p class="policy-desc"><strong>Objetivo:</strong> Establecer pautas de programación que garanticen la construcción de software libre de vulnerabilidades y prevengan la exposición de información confidencial.</p>
                     <div class="policy-meta">
-                        <div class="meta-item">
-                            <strong>Alcance</strong>
-                            <span>Programadores, ingenieros de software y personal con permisos de escritura en repositorios.</span>
-                        </div>
-                        <div class="meta-item">
-                            <strong>Responsables</strong>
-                            <span>Líder de Desarrollo Técnico y Responsable de Seguridad de la Información.</span>
-                        </div>
+                        <div><strong>Alcance:</strong> Aplicable a todos los programadores, ingenieros de software y personal con permisos de escritura en repositorios.</div>
+                        <div><strong>Responsables:</strong> Líder de Desarrollo Técnico y Responsable de Seguridad de la Información.</div>
                     </div>
-                    <div class="policy-section">
-                        <h4>📋 Reglas de Cumplimiento</h4>
-                        <ul>
-                            <li>Prohibido incorporar credenciales, tokens o claves privadas directamente en el código fuente.</li>
-                            <li>Revisión por pares obligatoria antes de integrar código en ramas principales.</li>
-                            <li>Verificación y actualización periódica de bibliotecas de terceros.</li>
-                        </ul>
-                    </div>
-                    <div class="policy-section">
-                        <h4>💻 Controles y Procedimientos</h4>
-                        <p><strong>Controles:</strong> Análisis estático en integración continua y filtros automáticos en repositorios contra secretos incrustados.<br>
-                        <strong>Incumplimientos:</strong> Rechazo automático de la versión, revisión con seguridad y capacitación en buenas prácticas.<br>
-                        <strong>Revisión:</strong> Evaluación semestral de directrices de codificación.</p>
-                    </div>
+                    <h4>Reglas de Cumplimiento:</h4>
+                    <ul class="styled-list">
+                        <li>Prohibido explícitamente incorporar credenciales, tokens de acceso o claves privadas directamente en el código fuente.</li>
+                        <li>Todo bloque de código debe ser sometido a revisión por pares antes de autorizar su integración en las ramas principales.</li>
+                        <li>Las bibliotecas y dependencias de terceros deben ser verificadas y actualizadas periódicamente.</li>
+                    </ul>
+                    <h4>Controles y Procedimientos:</h4>
+                    <p><strong>Controles:</strong> Herramientas de análisis estático en la cadena de integración continua y filtros automáticos en repositorios para bloquear subida de secretos.</p>
+                    <p><strong>Incumplimiento:</strong> Rechazo automático de la versión propuesta, revisión obligatoria con seguridad y capacitación en buenas prácticas en caso de reiteración.</p>
+                    <p><strong>Revisión:</strong> Evaluación semestral de las directrices de codificación.</p>
                 </div>
-            </div>
+            </article>
 
             <!-- Política 3 -->
-            <div class="policy-card">
-                <div class="policy-banner">
-                    <div class="policy-title">
-                        💾 Política 3: Copias de Seguridad (Backups)
-                    </div>
-                    <span class="badge badge-purple">Infraestructura</span>
+            <article class="policy-card">
+                <div class="policy-header">
+                    <h3>Política 3: Gestión de Copias de Seguridad y Respaldo de Datos</h3>
+                    <span class="badge badge-purple">Respaldos</span>
                 </div>
-                <div class="policy-details">
-                    <p><strong>Objetivo:</strong> Asegurar la disponibilidad y la capacidad de recuperación de la información ante fallos de hardware, catástrofes o incidentes de seguridad.</p>
+                <div class="policy-body">
+                    <p class="policy-desc"><strong>Objetivo:</strong> Asegurar la disponibilidad y la capacidad de recuperación de la información ante fallos de hardware, catástrofes o incidentes de seguridad.</p>
                     <div class="policy-meta">
-                        <div class="meta-item">
-                            <strong>Alcance</strong>
-                            <span>Repositorios de código, bases de datos, configuraciones de infraestructura y arte digital.</span>
-                        </div>
-                        <div class="meta-item">
-                            <strong>Responsables</strong>
-                            <span>Equipo de Infraestructura y Operaciones.</span>
-                        </div>
+                        <div><strong>Alcance:</strong> Repositorios de código, bases de datos de proyectos, configuraciones de infraestructura y recursos de arte digital.</div>
+                        <div><strong>Responsables:</strong> Equipo de Infraestructura y Operaciones.</div>
                     </div>
-                    <div class="policy-section">
-                        <h4>📋 Reglas de Cumplimiento</h4>
-                        <ul>
-                            <li>Respaldos incrementales diarios automatizados y respaldos completos semanales.</li>
-                            <li>Cifrado obligatorio de respaldos en transferencia y en almacenamiento externo.</li>
-                            <li>Pruebas de restauración programadas para validar la integridad.</li>
-                        </ul>
-                    </div>
-                    <div class="policy-section">
-                        <h4>💻 Controles y Procedimientos</h4>
-                        <p><strong>Controles:</strong> Tareas mediante scripts verificados, comprobación de checksums y alertas automáticas por fallo.<br>
-                        <strong>Incumplimientos:</strong> Resolución de anomalías de respaldo en un lapso no mayor a 3 horas con reporte técnico.<br>
-                        <strong>Revisión:</strong> Simulacro semestral de recuperación y revisión anual de directrices.</p>
-                    </div>
+                    <h4>Reglas de Cumplimiento:</h4>
+                    <ul class="styled-list">
+                        <li>Generación diaria automatizada de respaldos incrementales y ejecución semanal de respaldos completos.</li>
+                        <li>Cifrado obligatorio de los datos de respaldo tanto en transferencia como almacenados en ubicaciones externas.</li>
+                        <li>Ejecución programada de pruebas de restauración para validar la integridad de la información.</li>
+                    </ul>
+                    <h4>Controles y Procedimientos:</h4>
+                    <p><strong>Controles:</strong> Automatización mediante scripts verificados, comprobación de sumas de verificación (checksums) y alertas automáticas por interrupción.</p>
+                    <p><strong>Incumplimiento:</strong> Si una tarea de respaldo falla, el técnico de guardia debe resolverla en un lapso no mayor a 3 horas e ingresar el reporte técnico.</p>
+                    <p><strong>Revisión:</strong> Simulacro semestral de recuperación del sistema y revisión anual de las directrices.</p>
                 </div>
-            </div>
+            </article>
 
             <!-- Política 4 -->
-            <div class="policy-card">
-                <div class="policy-banner">
-                    <div class="policy-title">
-                        🚨 Política 4: Respuesta a Incidentes
-                    </div>
-                    <span class="badge badge-amber">Ciberseguridad</span>
+            <article class="policy-card">
+                <div class="policy-header">
+                    <h3>Política 4: Respuesta y Gestión de Incidentes de Seguridad</h3>
+                    <span class="badge badge-amber">Incidentes</span>
                 </div>
-                <div class="policy-details">
-                    <p><strong>Objetivo:</strong> Definir la metodología de detección, contención y mitigación frente a eventos que pongan en riesgo la seguridad de la información.</p>
+                <div class="policy-body">
+                    <p class="policy-desc"><strong>Objetivo:</strong> Definir la metodología de detección, contención y mitigación frente a eventos que pongan en riesgo la seguridad de la información.</p>
                     <div class="policy-meta">
-                        <div class="meta-item">
+                        <div><strong>Alcance:</strong> Todos los activos tecnológicos, instalaciones y personal de la organización.</div>
+                        <div><strong>Responsables:</strong> Equipo de Respuesta a Incidentes de Seguridad (CSIRT) y Personal del Área Técnica.</div>
+                    </div>
+                    <h4>Reglas de Cumplimiento:</h4>
+                    <ul class="styled-list">
+                        <li>Notificación inmediata al soporte técnico ante la detección de cualquier actividad inusual.</li>
+                        <li>Prohibido el apagado o modificación de los equipos afectados sin autorización explícita para preservar la evidencia.</li>
+                        <li>Documentación formal obligatoria registrando causas, impacto producido y acciones correctivas aplicadas.</li>
+                    </ul>
+                    <h4>Controles y Procedimientos:</h4>
+                    <p><strong>Controles:</strong> Herramientas de monitoreo de registros (logs), detección de intromisiones y plataforma centralizada de eventos de red.</p>
+                    <p><strong>Incumplimiento:</strong> La omisión voluntaria o el ocultamiento de un incidente será tipificado como falta grave y sancionado conforme al reglamento interno.</p>
+                    <p><strong>Revisión:</strong> Sesión de análisis posterior a incidentes de severidad alta y revisión anual del plan de emergencia.</p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
