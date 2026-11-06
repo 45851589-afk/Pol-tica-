@@ -3,229 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurLux Games & Software | Native Linux Ecosystem</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>TurLux Games - Políticas de Seguridad Informática</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navegacion Principal -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="brand-logo">
-                <i class="fa-solid fa-terminal logo-icon"></i>
-                <span class="logo-text">TurLux<span class="logo-highlight">OS</span></span>
-            </a>
-            
-            <nav class="nav-links">
-                <a href="#inicio" class="nav-link active">Inicio</a>
-                <a href="#productos" class="nav-link">Productos</a>
-                <a href="#seguridad" class="nav-link">Seguridad</a>
-                <a href="#terminal" class="nav-link">Instalador</a>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="#productos" class="btn btn-primary">
-                    <i class="fa-solid fa-download"></i> Descargas
-                </a>
-            </div>
+    <!-- Header Móvil -->
+    <header class="mobile-header">
+        <div class="brand">
+            <span class="brand-icon">🛡️</span>
+            <h1>TurLux<span>Games</span></h1>
         </div>
+        <button class="toggle-btn" id="toggleNav">☰</button>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero-section">
-        <div class="hero-container">
-            <div class="hero-badge">
-                <i class="fa-brands fa-linux"></i> Software & Juegos Nativo para Linux
-            </div>
-            <h1 class="hero-title">Rendimiento puro.<br><span class="gradient-text">Sin capas de compatibilidad.</span></h1>
-            <p class="hero-subtitle">
-                Desarrollamos motores graficos, videojuegos de alto rendimiento y herramientas de productividad disenadas exclusivamente para kernels Linux.
-            </p>
-            <div class="hero-buttons">
-                <a href="#productos" class="btn btn-primary btn-large">
-                    Explorar Catálogo <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#seguridad" class="btn btn-secondary btn-large">
-                    Políticas de Seguridad <i class="fa-solid fa-shield-halved"></i>
-                </a>
-            </div>
+    <!-- Menú de Navegación Lateral -->
+    <aside id="sidebar">
+        <div class="brand">
+            <span class="brand-icon">🛡️</span>
+            <h1>TurLux<span>Games</span></h1>
         </div>
-    </section>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <button class="active" onclick="switchTab('empresa', this)">
+                    <span class="icon">🏢</span> 1. Empresa
+                </button>
+            </li>
+            <li class="nav-item">
+                <button onclick="switchTab('activos', this)">
+                    <span class="icon">📦</span> 2a. Activos e Info
+                </button>
+            </li>
+            <li class="nav-item">
+                <button onclick="switchTab('amenazas', this)">
+                    <span class="icon">⚠️</span> 2b. Amenazas y Riesgos
+                </button>
+            </li>
+            <li class="nav-item">
+                <button onclick="switchTab('perfiles', this)">
+                    <span class="icon">👥</span> 2c. Perfiles de Usuario
+                </button>
+            </li>
+            <li class="nav-item">
+                <button onclick="switchTab('requisitos', this)">
+                    <span class="icon">🔒</span> 2d. Requisitos CIA
+                </button>
+            </li>
+            <li class="nav-item">
+                <button onclick="switchTab('politicas', this)">
+                    <span class="icon">📜</span> 3. Políticas Específicas
+                </button>
+            </li>
+        </ul>
+    </aside>
 
-    <!-- Filtros y Catalogo de Productos -->
-    <section id="productos" class="products-section">
-        <div class="section-container">
+    <!-- Contenido Principal -->
+    <main>
+        
+        <!-- 1. Presentación de la Empresa -->
+        <section id="empresa" class="tab-content active">
             <div class="section-header">
-                <h2 class="section-title">Ecosistema de Software</h2>
-                <p class="section-subtitle">Aplicaciones compiladas para distribuciones basadas en Debian, Arch y Fedora</p>
+                <h2><span class="icon">🏢</span> Presentación de la Empresa</h2>
+                <p>Información general y modelo de negocio de la organización.</p>
             </div>
-
-            <!-- Categorias de Filtrado -->
-            <div class="category-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="os">Sistemas</button>
-                <button class="filter-btn" data-filter="games">Juegos</button>
-                <button class="filter-btn" data-filter="dev">Desarrollo</button>
-                <button class="filter-btn" data-filter="sec">Seguridad</button>
-            </div>
-
-            <!-- Grilla de Productos -->
-            <div class="product-grid">
-                
-                <!-- Producto 1 -->
-                <article class="product-card" data-category="os">
-                    <div class="card-badge">OS / Sistema</div>
-                    <div class="card-icon">
-                        <i class="fa-solid fa-desktop"></i>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-green">🪪</div>
+                        <div class="card-title">Razón Social</div>
                     </div>
-                    <h3 class="product-title">TurLux OS Workstation</h3>
-                    <p class="product-description">
-                        Distribucion de alto rendimiento optimizada para desarrolladores y creadores de contenido. Incluye drivers proprietarios preconfigurados.
-                    </p>
-                    <ul class="product-specs">
-                        <li><i class="fa-solid fa-microchip"></i> Kernel 6.8 LTS Native</li>
-                        <li><i class="fa-solid fa-memory"></i> RAM Minima: 4 GB</li>
-                        <li><i class="fa-solid fa-lock"></i> Firma Digital GPG</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="price">Gratuito / Open Source</span>
-                        <a href="#terminal" class="btn btn-secondary btn-small">Instalar</a>
+                    <div class="card-body">
+                        <p><strong>TurLux Games & Software S.A.</strong></p>
                     </div>
-                </article>
-
-                <!-- Producto 2 -->
-                <article class="product-card" data-category="games">
-                    <div class="card-badge badge-game">Juego Nativo</div>
-                    <div class="card-icon">
-                        <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-blue">💻</div>
+                        <div class="card-title">Actividad Principal</div>
                     </div>
-                    <h3 class="product-title">Stellar Blade: Vanguard</h3>
-                    <p class="product-description">
-                        Juego de accion y estrategia espacial desarrollado con nuestro motor Vulkan nativo. Rendimiento sostenido a mas de 144 FPS.
-                    </p>
-                    <ul class="product-specs">
-                        <li><i class="fa-solid fa-cubes"></i> Vulkan API 1.3</li>
-                        <li><i class="fa-solid fa-hard-drive"></i> Espacio: 25 GB</li>
-                        <li><i class="fa-solid fa-users"></i> Multijugador P2P</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="price">$19.99 USD</span>
-                        <a href="#" class="btn btn-primary btn-small">Comprar</a>
+                    <div class="card-body">
+                        <p>Desarrollo de software y producción de videojuegos nativos para sistemas operativos Linux.</p>
                     </div>
-                </article>
-
-                <!-- Producto 3 -->
-                <article class="product-card" data-category="dev">
-                    <div class="card-badge badge-dev">Herramienta Dev</div>
-                    <div class="card-icon">
-                        <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-purple">📈</div>
+                        <div class="card-title">Modelo de Negocio</div>
                     </div>
-                    <h3 class="product-title">PinguForge Studio</h3>
-                    <p class="product-description">
-                        Entorno de desarrollo integrado (IDE) para sistemas Linux con compilacion paralela automatizada y soporte nativo C++/Rust.
-                    </p>
-                    <ul class="product-specs">
-                        <li><i class="fa-solid fa-bolt"></i> Compilacion ultra rapida</li>
-                        <li><i class="fa-solid fa-code-branch"></i> Git Integrado</li>
-                        <li><i class="fa-solid fa-plug"></i> Soporte para Plugins</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="price">Gratuito</span>
-                        <a href="#terminal" class="btn btn-secondary btn-small">Instalar</a>
-                    </div>
-                </article>
-
-                <!-- Producto 4 -->
-                <article class="product-card" data-category="sec">
-                    <div class="card-badge badge-sec">Ciberseguridad</div>
-                    <div class="card-icon">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </div>
-                    <h3 class="product-title">TurLux CyberShield Enterprise</h3>
-                    <p class="product-description">
-                        Suite de monitoreo de red, auditoria de secretos y proteccion contra vectores de amenaza en servidores Linux.
-                    </p>
-                    <ul class="product-specs">
-                        <li><i class="fa-solid fa-shield-cat"></i> Auditoria de Logs</li>
-                        <li><i class="fa-solid fa-key"></i> Escaneo de Secretos</li>
-                        <li><i class="fa-solid fa-network-wired"></i> Firewall de Red</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="price">Licencia Enterprise</span>
-                        <a href="#" class="btn btn-primary btn-small">Contactar</a>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Seccion de Seguridad / Certificaciones -->
-    <section id="seguridad" class="security-section">
-        <div class="section-container">
-            <div class="security-card">
-                <div class="security-info">
-                    <span class="security-tag"><i class="fa-solid fa-certificate"></i> Garantia TurLux</span>
-                    <h2>Infraestructura Cifrada y Codigo Limpio</h2>
-                    <p>
-                        En cumplimiento estricto con nuestras politicas corporativas de seguridad, todo nuestro software pasa por revisiones por pares, analisis estatico continuo y firmas digitales para garantizar descargas autenticas y libres de vulnerabilidades.
-                    </p>
-                    <div class="security-features">
-                        <div class="feature-item">
-                            <i class="fa-solid fa-key"></i>
-                            <span>Claves SSH personales y cifrado RSA/ED25519</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-cloud-arrow-up"></i>
-                            <span>Copias de seguridad diarias automatizadas</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-user-lock"></i>
-                            <span>Autenticacion de Doble Factor (2FA) obligatoria</span>
-                        </div>
+                    <div class="card-body">
+                        <p>Creación de aplicaciones a medida, motores gráficos y distribución digital de programas y juegos mediante plataforma web propia y repositorios especializados.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Generador de Comandos Terminal -->
-    <section id="terminal" class="terminal-section">
-        <div class="section-container">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
+        <!-- 2a. Activos e Información Sensible -->
+        <section id="activos" class="tab-content">
+            <div class="section-header">
+                <h2><span class="icon">📦</span> Activos e Información Sensible</h2>
+                <p>Elementos clave que requieren protección dentro de la infraestructura.</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-blue">🖥️</div>
+                        <div class="card-title">Activos a Proteger</div>
                     </div>
-                    <div class="terminal-title">bash - turlux-installer</div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span class="bullet-check">✓</span> Repositorios de código fuente de videojuegos y software nativo.</li>
+                            <li><span class="bullet-check">✓</span> Servidores de integración continua y entornos de compilación.</li>
+                            <li><span class="bullet-check">✓</span> Servidores de almacenamiento y distribución de contenidos digitales.</li>
+                            <li><span class="bullet-check">✓</span> Estaciones de trabajo del personal de desarrollo, diseño y administración.</li>
+                            <li><span class="bullet-check">✓</span> Equipos de red, enrutadores y firewalls perimetrales.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="terminal-body">
-                    <p class="terminal-comment"># Agrega el repositorio oficial de TurLux a tu sistema</p>
-                    <div class="command-line">
-                        <span class="prompt">user@linux:~$</span>
-                        <span class="command">sudo add-apt-repository ppa:turlux-games/ppa && sudo apt update</span>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-purple">🔑</div>
+                        <div class="card-title">Información Sensible</div>
                     </div>
-                    <p class="terminal-comment"># Instala la suite completa</p>
-                    <div class="command-line">
-                        <span class="prompt">user@linux:~$</span>
-                        <span class="command">sudo apt install turlux-desktop-suite</span>
+                    <div class="card-body">
+                        <ul>
+                            <li><span class="bullet-key">🔑</span> Claves privadas de firmado digital de paquetes y ejecutables.</li>
+                            <li><span class="bullet-key">🔑</span> Credenciales de acceso a servidores de infraestructura y claves SSH.</li>
+                            <li><span class="bullet-key">🔑</span> Tokens de autenticación y claves API para servicios integrados.</li>
+                            <li><span class="bullet-key">🔑</span> Bases de datos de usuarios, clientes registrados y transacciones.</li>
+                            <li><span class="bullet-key">🔑</span> Datos personales de empleados conforme a normativa legal vigente.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2026 TurLux Games & Software S.A. Todos los derechos reservados.</p>
-            <p class="footer-subtext">Desarrollo nativo y seguro para el ecosistema GNU/Linux.</p>
-        </div>
-    </footer>
+        <!-- 2b. Amenazas, Vulnerabilidades y Riesgos -->
+        <section id="amenazas" class="tab-content">
+            <div class="section-header">
+                <h2><span class="icon">⚠️</span> Amenazas, Vulnerabilidades y Riesgos</h2>
+                <p>Diagnóstico de riesgos y factores de exposición de TurLux.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-red">🐛</div>
+                        <div class="card-title">Amenazas</div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span class="bullet-danger">✖</span> Ingeniería social y suplantación de identidad.</li>
+                            <li><span class="bullet-danger">✖</span> Inyección de código malicioso en la cadena de suministro.</li>
+                            <li><span class="bullet-danger">✖</span> Robo de credenciales administrativas.</li>
+                            <li><span class="bullet-danger">✖</span> Infección por ransomware (cifrado de datos).</li>
+                            <li><span class="bullet-danger">✖</span> Interrupción por ataques DoS/DDoS.</li>
+                        </ul>
+                    </div>
+                </div>
 
-</body>
-  </html>
-  
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-amber">🔓</div>
+                        <div class="card-title">Vulnerabilidades</div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span class="bullet-warning">⚠️</span> Gestión deficiente y baja complejidad de claves.</li>
+                            <li><span class="bullet-warning">⚠️</span> Bibliotecas de software de terceros desactualizadas.</li>
+                            <li><span class="bullet-warning">⚠️</span> Inclusión involuntaria de secretos en el código.</li>
+                            <li><span class="bullet-warning">⚠️</span> Ausencia de 2FA en servicios internos.</li>
+                            <li><span class="bullet-warning">⚠️</span> Asignación excesiva de privilegios.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-purple">💥</div>
+                        <div class="card-title">Riesgos</div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span class="bullet-risk">☣</span> Filtración o robo de propiedad intelectual.</li>
+                            <li><span class="bullet-risk">☣</span> Publicación de ejecutables alterados con malware.</li>
+                            <li><span class="bullet-risk">☣</span> Interrupción prolongada de producción y descargas.</li>
+                            <li><span class="bullet-risk">☣</span> Pérdida de integridad en base de datos de clientes.</li>
+                            <li><span class="bullet-risk">☣</span> Daño reputacional severo e incumplimiento legal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2c. Perfiles de Usuarios -->
+        <section id="perfiles" class="tab-content">
+            <div class="section-header">
+                <h2><span class="icon">👥</span> Perfiles de Usuarios</h2>
+                <p>Niveles de acceso y responsabilidades por rol dentro de la empresa.</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-blue">👨‍💻</div>
+                        <div class="card-title">Programadores</div>
+                    </div>
+                    <div class="card-body">
+                        <p>Personal encargado de la redacción de código y algoritmos. Disponen de acceso limitado a los repositorios asociados a sus proyectos asignados.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-amber">🎨</div>
+                        <div class="card-title">Artistas y Diseñadores</div>
+                    </div>
+                    <div class="card-body">
+                        <p>Personal creativo dedicado al modelado, texturizado, audio y animación. Acceden únicamente a los servidores de almacenamiento de recursos gráficos y sonoros.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-red">🛠️</div>
+                        <div class="card-title">Administradores de Sistemas</div>
+                    </div>
+                    <div class="card-body">
+                        <p>Personal técnico responsable de la infraestructura y ciberseguridad. Poseen privilegios elevados gestionados mediante control estricto y auditoría continua.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon icon-green">💼</div>
+                        <div class="card-title">Personal Administrativo</div>
+                    </div>
+                    <div class="card-body">
+                        <p>Empleados enfocados en gestión financiera, recursos humanos y legales. Acceden exclusivamente a las aplicaciones comerciales y de gestión contable.</p>
+                    </div>
+                </div>
+
+                <div class="card full-width">
+                    <div class="card-header">
+                        <div class="card-icon icon-purple">🎮</div>
+                        <div class="card-title">Usuarios Finales</div>
+                    </div>
+                    <div class="card-body">
+                        <p>Jugadores y clientes que acceden a la plataforma web corporativa para la adquisición y descarga de software. Se encuentran completamente aislados de la red privada de la empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2d. Requisitos Generales de Seguridad -->
+        <section id="requisitos" class="tab-content">
+            <div class="section-header">
+                <h2><span class="icon">🔒</span> Requisitos Generales de Seguridad</h2>
+                <p>Pilares fundamentales del modelo de seguridad (Triada CIA).</p>
+            </div>
+            <div class="req-grid">
+                <div class="req-card confidentiality">
+                    <h3>👁️ Confidencialidad</h3>
+                    <p>Garantizar que los activos digitales y la propiedad intelectual sean accesibles únicamente por el personal explícitamente autorizado.</p>
+                </div>
+                <div class="req-card integrity">
+                    <h3>🛡️ Integridad</h3>
+                    <p>Preservar la exactitud del código fuente y de los ejecutables distribuidos, evitando modificaciones no autorizadas durante el desarrollo o la transmisión.</p>
+                </div>
+                <div class="req-card availability">
+                    <h3>⚙️ Disponibilidad</h3>
+                    <p>Asegurar la continuidad operativa de los entornos de producción, servidores Git y plataformas de descarga.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Políticas Específicas de Seguridad -->
+        <section id="politicas" class="tab-content">
+            <div class="section-header">
+                <h2><span class="icon">📜</span> Políticas Específicas de Seguridad</h2>
+                <p>Normativas detalladas de cumplimiento obligatorio.</p>
+            </div>
+
+            <!-- Política 1 -->
+            <div class="policy-card">
+                <div class="policy-banner">
+                    <div class="policy-title">
+                        🔐 Política 1: Control de Acceso e Identificación
+                    </div>
+                    <span class="badge badge-green">Acceso y Autenticación</span>
+                </div>
+                <div class="policy-details">
+                    <p><strong>Objetivo:</strong> Normar el acceso a los recursos tecnológicos corporativos para prevenir ingresos no autorizados y mitigar la exposición de los sistemas críticos.</p>
+                    <div class="policy-meta">
+                        <div class="meta-item">
+                            <strong>Alcance</strong>
+                            <span>Totalidad de empleados, colaboradores externos y servicios que requieran acceso a la infraestructura.</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Responsables</strong>
+                            <span>Área de Administración de Sistemas (gestión técnica) y cada usuario (custodia de credenciales).</span>
+                        </div>
+                    </div>
+                    <div class="policy-section">
+                        <h4>📋 Reglas de Cumplimiento</h4>
+                        <ul>
+                            <li>Cada cuenta debe estar asociada a un único usuario responsable; prohibido uso de cuentas compartidas.</li>
+                            <li>Contraseñas con longitud mínima de 12 caracteres (mayúsculas, minúsculas, números y caracteres especiales).</li>
+                            <li>Uso obligatorio de claves SSH personales cifradas para todo acceso remoto a servidores Linux.</li>
+                            <li>Inicio de sesión con usuario root deshabilitado (usar elevación de privilegios identificable).</li>
+                            <li>2FA obligatorio en la totalidad de plataformas institucionales.</li>
+                        </ul>
+                    </div>
+                    <div class="policy-section">
+                        <h4>💻 Controles y Procedimientos</h4>
+                        <p><strong>Controles:</strong> Validación automatizada de contraseñas, bloqueo tras 5 intentos fallidos, registro centralizado de auditoría de comandos.<br>
+                        <strong>Incumplimientos:</strong> Revocación inmediata de credenciales, notificación formal a jefatura e inicio de procedimiento disciplinario.<br>
+                        <strong>Revisión:</strong> Auditoría trimestral de matriz de accesos y revisión anual del texto de la política.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Política 2 -->
+            <div class="policy-card">
+                <div class="policy-banner">
+                    <div class="policy-title">
+                        🌿 Política 2: Desarrollo Seguro y Código Fuente
+                    </div>
+                    <span class="badge badge-blue">Desarrollo</span>
+                </div>
+                <div class="policy-details">
+                    <p><strong>Objetivo:</strong> Establecer pautas de programación que garanticen la construcción de software libre de vulnerabilidades y prevengan la exposición de información confidencial.</p>
+                    <div class="policy-meta">
+                        <div class="meta-item">
+                            <strong>Alcance</strong>
+                            <span>Programadores, ingenieros de software y personal con permisos de escritura en repositorios.</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Responsables</strong>
+                            <span>Líder de Desarrollo Técnico y Responsable de Seguridad de la Información.</span>
+                        </div>
+                    </div>
+                    <div class="policy-section">
+                        <h4>📋 Reglas de Cumplimiento</h4>
+                        <ul>
+                            <li>Prohibido incorporar credenciales, tokens o claves privadas directamente en el código fuente.</li>
+                            <li>Revisión por pares obligatoria antes de integrar código en ramas principales.</li>
+                            <li>Verificación y actualización periódica de bibliotecas de terceros.</li>
+                        </ul>
+                    </div>
+                    <div class="policy-section">
+                        <h4>💻 Controles y Procedimientos</h4>
+                        <p><strong>Controles:</strong> Análisis estático en integración continua y filtros automáticos en repositorios contra secretos incrustados.<br>
+                        <strong>Incumplimientos:</strong> Rechazo automático de la versión, revisión con seguridad y capacitación en buenas prácticas.<br>
+                        <strong>Revisión:</strong> Evaluación semestral de directrices de codificación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Política 3 -->
+            <div class="policy-card">
+                <div class="policy-banner">
+                    <div class="policy-title">
+                        💾 Política 3: Copias de Seguridad (Backups)
+                    </div>
+                    <span class="badge badge-purple">Infraestructura</span>
+                </div>
+                <div class="policy-details">
+                    <p><strong>Objetivo:</strong> Asegurar la disponibilidad y la capacidad de recuperación de la información ante fallos de hardware, catástrofes o incidentes de seguridad.</p>
+                    <div class="policy-meta">
+                        <div class="meta-item">
+                            <strong>Alcance</strong>
+                            <span>Repositorios de código, bases de datos, configuraciones de infraestructura y arte digital.</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Responsables</strong>
+                            <span>Equipo de Infraestructura y Operaciones.</span>
+                        </div>
+                    </div>
+                    <div class="policy-section">
+                        <h4>📋 Reglas de Cumplimiento</h4>
+                        <ul>
+                            <li>Respaldos incrementales diarios automatizados y respaldos completos semanales.</li>
+                            <li>Cifrado obligatorio de respaldos en transferencia y en almacenamiento externo.</li>
+                            <li>Pruebas de restauración programadas para validar la integridad.</li>
+                        </ul>
+                    </div>
+                    <div class="policy-section">
+                        <h4>💻 Controles y Procedimientos</h4>
+                        <p><strong>Controles:</strong> Tareas mediante scripts verificados, comprobación de checksums y alertas automáticas por fallo.<br>
+                        <strong>Incumplimientos:</strong> Resolución de anomalías de respaldo en un lapso no mayor a 3 horas con reporte técnico.<br>
+                        <strong>Revisión:</strong> Simulacro semestral de recuperación y revisión anual de directrices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Política 4 -->
+            <div class="policy-card">
+                <div class="policy-banner">
+                    <div class="policy-title">
+                        🚨 Política 4: Respuesta a Incidentes
+                    </div>
+                    <span class="badge badge-amber">Ciberseguridad</span>
+                </div>
+                <div class="policy-details">
+                    <p><strong>Objetivo:</strong> Definir la metodología de detección, contención y mitigación frente a eventos que pongan en riesgo la seguridad de la información.</p>
+                    <div class="policy-meta">
+                        <div class="meta-item">
