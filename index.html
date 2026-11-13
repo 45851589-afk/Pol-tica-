@@ -3,286 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurLux Games & Software S.A. - Políticas de Seguridad</title>
+    <title>Políticas de Seguridad y Gobierno - TurLux Games & Software S.A.</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <!-- Menú de navegación lateral -->
-    <aside class="sidebar">
-        <div class="brand">
-            <h2>TurLux <span>Games</span></h2>
-            <p>Seguridad Informática</p>
-        </div>
-        <nav class="nav-menu">
-            <a href="#empresa" class="nav-link">1. Empresa</a>
-            <a href="#activos" class="nav-link">2a. Activos e Info</a>
-            <a href="#amenazas" class="nav-link">2b. Amenazas y Riesgos</a>
-            <a href="#perfiles" class="nav-link">2c. Perfiles de Usuario</a>
-            <a href="#requisitos" class="nav-link">2d. Requisitos CIA</a>
-            <a href="#politicas" class="nav-link">3. Políticas Específicas</a>
+    <div class="contenedor">
+        
+        <header>
+            <div class="meta-doc">Documento Institucional | Versión 1.0 | Noviembre de 2026</div>
+            <h1>Políticas Específicas de Seguridad y Gobierno de la Plataforma</h1>
+            <div class="empresa">TurLux Games & Software S.A.</div>
+        </header>
+
+        <nav class="indice">
+            <h2>Índice Rápido</h2>
+            <ul>
+                <li><a href="#presentacion">Presentación</a></li>
+                <li><a href="#politica-1">1. Gobierno e Identificación</a></li>
+                <li><a href="#politica-2">2. Protección de Datos</a></li>
+                <li><a href="#politica-3">3. Socios y Proveedores</a></li>
+                <li><a href="#politica-4">4. Admisión y Publicación</a></li>
+                <li><a href="#politica-5">5. Contenido y Menores</a></li>
+                <li><a href="#politica-6">6. Calidad y Compatibilidad</a></li>
+                <li><a href="#politica-7">7. Distribución y Parches</a></li>
+                <li><a href="#politica-8">8. Compras y Ventas</a></li>
+                <li><a href="#politica-9">9. Reembolsos y Reclamos</a></li>
+                <li><a href="#politica-10">10. Licencias y Bibliotecas</a></li>
+                <li><a href="#politica-11">11. Conducta y Moderación</a></li>
+                <li><a href="#politica-12">12. Mods y Contenido Usuario</a></li>
+                <li><a href="#politica-13">13. Atención al Cliente</a></li>
+                <li><a href="#politica-14">14. Copias de Seguridad</a></li>
+                <li><a href="#politica-15">15. Gestión de Incidentes</a></li>
+                <li><a href="#politica-16">16. Infraestructura y Servicios</a></li>
+                <li><a href="#supervision">Supervisión y Aprobación</a></li>
+            </ul>
         </nav>
-    </aside>
 
-    <!-- Contenido Principal -->
-    <main class="main-content">
-
-        <!-- 1. Presentación de la Empresa -->
-        <section id="empresa" class="content-section">
-            <div class="section-header">
-                <h2>1. Presentación de la Empresa</h2>
-                <p>Información general sobre el modelo de negocio y operaciones de la empresa.</p>
-            </div>
-            <div class="cards-grid grid-3">
-                <div class="card">
-                    <h3>Razón Social</h3>
-                    <p><strong>TurLux Games & Software S.A.</strong></p>
-                </div>
-                <div class="card">
-                    <h3>Actividad Principal</h3>
-                    <p>Desarrollo de software y producción de videojuegos nativos para sistemas operativos Linux.</p>
-                </div>
-                <div class="card">
-                    <h3>Modelo de Negocio</h3>
-                    <p>Creación de aplicaciones a medida, motores gráficos y distribución digital de programas y juegos mediante plataforma web propia y repositorios especializados.</p>
-                </div>
-            </div>
+        <section id="presentacion">
+            <h2>Presentación</h2>
+            <p>El presente documento establece las políticas de seguridad y funcionamiento que deben cumplirse en <strong>TurLux Games & Software S.A.</strong> La empresa desarrolla y distribuye videojuegos y aplicaciones para sistemas Linux, y ofrece una plataforma digital en la que los usuarios pueden crear cuentas, adquirir productos, descargarlos, participar en comunidades y gestionar sus bibliotecas digitales. También permite que desarrolladores externos publiquen y comercialicen sus propios proyectos.</p>
+            <p>Las políticas buscan proteger la información, los sistemas, los productos digitales y las operaciones comerciales de la empresa. Además, establecen reglas para los empleados, desarrolladores asociados, moderadores, proveedores y usuarios. Su cumplimiento es obligatorio para toda persona que utilice los servicios internos o públicos de TurLux.</p>
+            <p>Cada política contiene un objetivo, su alcance, los responsables de aplicarla, las reglas principales, los controles previstos, el procedimiento ante incumplimientos y el mecanismo de revisión.</p>
         </section>
 
-        <!-- 2a. Activos a Proteger e Información Sensible -->
-        <section id="activos" class="content-section">
-            <div class="section-header">
-                <h2>2a. Diagnóstico: Activos e Información Sensible</h2>
-                <p>Elementos críticos identificados dentro de la infraestructura tecnológica.</p>
-            </div>
-            <div class="cards-grid grid-2">
-                <div class="card">
-                    <h3 class="title-blue">Activos a Proteger</h3>
-                    <ul class="styled-list">
-                        <li>Repositorios de código fuente de videojuegos y software nativo.</li>
-                        <li>Servidores de integración continua y entornos de compilación.</li>
-                        <li>Servidores de almacenamiento y distribución de contenidos digitales.</li>
-                        <li>Estaciones de trabajo del personal de desarrollo, diseño y administración.</li>
-                        <li>Equipos de red, enrutadores y firewalls perimetrales.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 class="title-purple">Información Sensible</h3>
-                    <ul class="styled-list">
-                        <li>Claves privadas de firmado digital de paquetes y ejecutables.</li>
-                        <li>Credenciales de acceso a servidores de infraestructura y claves SSH.</li>
-                        <li>Tokens de autenticación y claves API para servicios integrados.</li>
-                        <li>Bases de datos de usuarios, clientes registrados y registros de transacciones.</li>
-                        <li>Datos personales de los empleados conforme a la normativa legal vigente.</li>
-                    </ul>
-                </div>
-            </div>
+        <section id="diagnostico">
+            <h2>Diagnóstico y Elementos Base</h2>
+            
+            <h3>Activos a Proteger</h3>
+            <ul>
+                <li>Repositorios de código fuente de videojuegos y software nativo para Linux.</li>
+                <li>Servidores de integración continua, compilación y distribución de contenidos.</li>
+                <li>Estaciones de trabajo del personal de desarrollo, diseño y administración.</li>
+                <li>Infraestructura de red, bases de datos, cuentas y bibliotecas digitales.</li>
+            </ul>
+
+            <h3>Información Sensible</h3>
+            <ul>
+                <li>Claves privadas de firmado digital de paquetes y ejecutables.</li>
+                <li>Credenciales de acceso, llaves SSH y tokens de autenticación.</li>
+                <li>Datos personales de usuarios, empleados y desarrolladores asociados.</li>
+                <li>Registros de operaciones comerciales y comprobantes de pago.</li>
+            </ul>
+
+            <h3>Perfiles de Usuarios</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Perfil</th>
+                        <th>Rol y Nivel de Acceso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Administradores y DevOps</strong></td>
+                        <td>Gestión de infraestructura Linux, servidores y controles de seguridad con privilegios auditados.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desarrolladores Internos</strong></td>
+                        <td>Creación y mantenimiento del código fuente y aplicaciones propias bajo mínimo privilegio.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desarrolladores Externos y Socios</strong></td>
+                        <td>Acceso limitado únicamente a sus paneles, proyectos y métricas de publicación.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moderadores y Soporte</strong></td>
+                        <td>Gestión de consultas, reclamos y espacios comunitarios con acceso restringido a datos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Usuarios Finales</strong></td>
+                        <td>Clientes que crean cuentas, adquieren productos, descargan juegos y participan en la comunidad.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
-        <!-- 2b. Amenazas, Vulnerabilidades y Riesgos -->
-        <section id="amenazas" class="content-section">
-            <div class="section-header">
-                <h2>2b. Amenazas, Vulnerabilidades y Riesgos</h2>
-                <p>Evaluación de factores de riesgo y exposición operativa.</p>
-            </div>
-            <div class="cards-grid grid-3">
-                <div class="card border-red">
-                    <h3 class="title-red">Amenazas</h3>
-                    <ul class="styled-list">
-                        <li>Ataques de ingeniería social y suplantación de identidad dirigidos al personal.</li>
-                        <li>Inyección de código malicioso en la cadena de suministro de software.</li>
-                        <li>Compromiso o robo de credenciales administrativas.</li>
-                        <li>Infección por programas maliciosos de cifrado o bloqueo de datos (Ransomware).</li>
-                        <li>Interrupción de servicios por ataques de denegación de servicio (DoS/DDoS).</li>
-                    </ul>
-                </div>
-                <div class="card border-amber">
-                    <h3 class="title-amber">Vulnerabilidades</h3>
-                    <ul class="styled-list">
-                        <li>Gestión deficiente de credenciales y uso de claves de acceso con complejidad insuficiente.</li>
-                        <li>Presencia de bibliotecas de software de terceros sin actualizar.</li>
-                        <li>Inclusión por descuido de secretos dentro del código fuente.</li>
-                        <li>Ausencia de autenticación de doble factor (2FA) en servicios internos.</li>
-                        <li>Asignación excesiva de privilegios a cuentas de usuario.</li>
-                    </ul>
-                </div>
-                <div class="card border-purple">
-                    <h3 class="title-purple">Riesgos</h3>
-                    <ul class="styled-list">
-                        <li>Filtración o robo de la propiedad intelectual antes de su comercialización.</li>
-                        <li>Publicación y distribución involuntaria de ejecutables alterados con código dañino.</li>
-                        <li>Interrupción prolongada de la línea de producción y de los servidores de descarga.</li>
-                        <li>Pérdida de integridad en las bases de datos de clientes e historial de compras.</li>
-                        <li>Daño reputacional severo e incumplimiento de acuerdos comerciales o legales.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <section id="politicas">
+            <h2>Políticas Específicas de Seguridad</h2>
 
-        <!-- 2c. Perfiles de Usuarios -->
-        <section id="perfiles" class="content-section">
-            <div class="section-header">
-                <h2>2c. Perfiles de Usuarios</h2>
-                <p>Niveles de acceso y responsabilidades asignadas según el rol corporativo.</p>
-            </div>
-            <div class="cards-grid grid-2">
-                <div class="card">
-                    <h3>Programadores</h3>
-                    <p>Personal encargado de la redacción de código y algoritmos. Disponen de acceso limitado a los repositorios asociados a sus proyectos asignados.</p>
-                </div>
-                <div class="card">
-                    <h3>Artistas y Diseñadores</h3>
-                    <p>Personal creativo dedicado al modelado, texturizado, audio y animación. Acceden únicamente a los servidores de almacenamiento de recursos gráficos y sonoros.</p>
-                </div>
-                <div class="card">
-                    <h3>Administradores de Sistemas</h3>
-                    <p>Personal técnico responsable de la infraestructura y ciberseguridad. Poseen privilegios elevados gestionados mediante control estricto y auditoría continua.</p>
-                </div>
-                <div class="card">
-                    <h3>Personal Administrativo</h3>
-                    <p>Empleados enfocados en gestión financiera, recursos humanos y legales. Acceden exclusivamente a las aplicaciones comerciales y de gestión contable.</p>
-                </div>
-                <div class="card card-full">
-                    <h3>Usuarios Finales</h3>
-                    <p>Jugadores y clientes que acceden a la plataforma web corporativa para la adquisición y descarga de software. Se encuentran completamente aislados de la red privada de la empresa.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2d. Requisitos Generales de Seguridad -->
-        <section id="requisitos" class="content-section">
-            <div class="section-header">
-                <h2>2d. Requisitos Generales de Seguridad</h2>
-                <p>Principios fundamentales para la protección de la información (Triada CIA).</p>
-            </div>
-            <div class="cards-grid grid-3">
-                <div class="card req-box border-blue">
-                    <h3 class="title-blue">Confidencialidad</h3>
-                    <p>Garantizar que los activos digitales y la propiedad intelectual sean accesibles únicamente por el personal explícitamente autorizado.</p>
-                </div>
-                <div class="card req-box border-green">
-                    <h3 class="title-green">Integridad</h3>
-                    <p>Preservar la exactitud del código fuente y de los ejecutables distribuidos, evitando modificaciones no autorizadas durante el desarrollo o la transmisión.</p>
-                </div>
-                <div class="card req-box border-purple">
-                    <h3 class="title-purple">Disponibilidad</h3>
-                    <p>Asegurar la continuidad operativa de los entornos de producción, servidores Git y plataformas de descarga.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Políticas Específicas de Seguridad -->
-        <section id="politicas" class="content-section">
-            <div class="section-header">
-                <h2>3. Políticas Específicas de Seguridad</h2>
-                <p>Normativas internas de cumplimiento obligatorio para todo el personal.</p>
+            <div class="politica" id="politica-1">
+                <h3>Política 1. Gobierno de seguridad, identificación y control de accesos</h3>
+                <p><strong>Objetivo:</strong> Establecer un sistema de identificación y autorización que permita que cada persona acceda únicamente a los recursos necesarios para cumplir sus tareas.</p>
+                <p><strong>Alcance:</strong> Se aplica a empleados, administradores, desarrolladores internos y externos, moderadores, personal de soporte, proveedores con acceso y usuarios de la plataforma.</p>
+                <p><strong>Responsables:</strong> Dirección General; responsable de Seguridad Informática; administradores de sistemas; responsables de cada área.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Cada persona deberá utilizar una cuenta individual. No se permite compartir usuarios ni contraseñas.</li>
+                    <li>Los permisos se asignarán según el puesto y el principio de mínimo privilegio.</li>
+                    <li>Las cuentas administrativas deberán utilizar autenticación multifactor.</li>
+                    <li>Las contraseñas deberán ser robustas y no reutilizarse en servicios de la empresa. Las credenciales se almacenarán mediante mecanismos seguros de hash.</li>
+                    <li>Los accesos remotos administrativos deberán utilizar canales cifrados y claves autorizadas.</li>
+                    <li>Las sesiones deberán cerrarse después de un período de inactividad y los accesos fallidos podrán generar bloqueos temporales.</li>
+                    <li>Al finalizar una relación laboral o comercial, los permisos deberán revocarse sin demora.</li>
+                    <li>Las acciones administrativas y los cambios importantes deberán quedar registrados.</li>
+                </ul>
+                <p><strong>Controles:</strong> La aplicación de esta política se verificará mediante registros de actividad, revisiones de permisos, controles técnicos y auditorías internas, según corresponda al proceso.</p>
+                <p><strong>Procedimiento ante incumplimientos:</strong> Se revisarán los registros de acceso, los permisos y las cuentas privilegiadas. Ante un acceso no autorizado, se bloqueará la cuenta afectada, se preservarán los registros y se investigará el hecho. Los incumplimientos podrán generar suspensión de permisos y medidas disciplinarias o contractuales.</p>
+                <p><strong>Mecanismo de revisión:</strong> Los permisos se revisarán mensualmente para cuentas privilegiadas y trimestralmente para el resto. La política se actualizará cuando cambien los sistemas, los puestos o las amenazas.</p>
             </div>
 
-            <!-- Política 1 -->
-            <article class="policy-card">
-                <div class="policy-header">
-                    <h3>Política 1: Control de Acceso e Identificación de Usuarios</h3>
-                    <span class="badge badge-green">Acceso</span>
-                </div>
-                <div class="policy-body">
-                    <p class="policy-desc"><strong>Objetivo:</strong> Normar el acceso a los recursos tecnológicos corporativos para prevenir ingresos no autorizados y mitigar la exposición de los sistemas críticos.</p>
-                    <div class="policy-meta">
-                        <div><strong>Alcance:</strong> Aplica a la totalidad de los empleados, colaboradores externos y servicios que requieran acceso a la infraestructura de la empresa.</div>
-                        <div><strong>Responsables:</strong> Área de Administración de Sistemas (gestión técnica) y cada usuario (custodia de credenciales).</div>
-                    </div>
-                    <h4>Reglas de Cumplimiento:</h4>
-                    <ul class="styled-list">
-                        <li>Cada cuenta debe estar asociada a un único usuario responsable; queda prohibido el uso de cuentas compartidas.</li>
-                        <li>Las contraseñas deben contener una longitud mínima de doce caracteres, integrando mayúsculas, minúsculas, números y caracteres especiales.</li>
-                        <li>Uso obligatorio de claves SSH personales cifradas para todo acceso remoto a servidores Linux.</li>
-                        <li>Inicio de sesión con usuario root deshabilitado; tareas administrativas mediante elevación de privilegios registrada.</li>
-                        <li>Autenticación de doble factor (2FA) obligatoria en la totalidad de las plataformas institucionales.</li>
-                    </ul>
-                    <h4>Controles y Procedimientos:</h4>
-                    <p><strong>Controles:</strong> Validación automatizada de complejidad de claves, bloqueo tras 5 intentos fallidos y registro centralizado de auditoría sobre comandos con privilegios elevados.</p>
-                    <p><strong>Incumplimiento:</strong> Revocación inmediata de credenciales, notificación formal a la jefatura e inicio del procedimiento disciplinario.</p>
-                    <p><strong>Revisión:</strong> Auditoría trimestral de la matriz de accesos y revisión anual del texto de la política.</p>
-                </div>
-            </article>
+            <div class="politica" id="politica-2">
+                <h3>Política 2. Protección de datos personales y privacidad</h3>
+                <p><strong>Objetivo:</strong> Proteger los datos personales de usuarios, empleados y desarrolladores, evitando su exposición, uso indebido o conservación innecesaria.</p>
+                <p><strong>Alcance:</strong> Comprende los datos de registro, perfiles, compras, consultas de soporte, actividad de la plataforma, datos de empleados y datos de contacto de desarrolladores.</p>
+                <p><strong>Responsables:</strong> Responsable de Protección de Datos o área designada; Seguridad Informática; Soporte; Dirección General.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Se recopilarán únicamente los datos necesarios para prestar el servicio y cumplir obligaciones legales.</li>
+                    <li>Las contraseñas nunca se almacenarán en texto legible.</li>
+                    <li>Los datos sensibles y las copias de seguridad deberán protegerse mediante cifrado y controles de acceso.</li>
+                    <li>Los datos de tarjetas y códigos de seguridad no serán almacenados por TurLux; los pagos se procesarán mediante proveedores especializados.</li>
+                    <li>El personal solo podrá consultar datos personales cuando exista una razón laboral válida.</li>
+                    <li>Los usuarios podrán solicitar acceso, rectificación o eliminación de sus datos conforme a la normativa aplicable.</li>
+                    <li>Se establecerán plazos de conservación y procedimientos de eliminación o anonimización.</li>
+                    <li>Los datos de menores recibirán protección reforzada y no se utilizarán para publicidad o perfiles incompatibles con la normativa.</li>
+                </ul>
+                <p><strong>Controles:</strong> La aplicación de esta política se verificará mediante registros de actividad, revisiones de permisos, controles técnicos y auditorías internas, según corresponda al proceso.</p>
+                <p><strong>Procedimiento ante incumplimientos:</strong> Ante una exposición o uso indebido, se limitará el acceso, se investigará el alcance y se aplicarán medidas de contención. Cuando corresponda, se notificará a las personas afectadas y a las autoridades competentes según la legislación vigente.</p>
+                <p><strong>Mecanismo de revisión:</strong> Se revisará al menos una vez al año y cada vez que se incorporen nuevas funciones que recopilen datos personales.</p>
+            </div>
 
-            <!-- Política 2 -->
-            <article class="policy-card">
-                <div class="policy-header">
-                    <h3>Política 2: Desarrollo Seguro y Gestión del Código Fuente</h3>
-                    <span class="badge badge-blue">Desarrollo</span>
-                </div>
-                <div class="policy-body">
-                    <p class="policy-desc"><strong>Objetivo:</strong> Establecer pautas de programación que garanticen la construcción de software libre de vulnerabilidades y prevengan la exposición de información confidencial.</p>
-                    <div class="policy-meta">
-                        <div><strong>Alcance:</strong> Aplicable a todos los programadores, ingenieros de software y personal con permisos de escritura en repositorios.</div>
-                        <div><strong>Responsables:</strong> Líder de Desarrollo Técnico y Responsable de Seguridad de la Información.</div>
-                    </div>
-                    <h4>Reglas de Cumplimiento:</h4>
-                    <ul class="styled-list">
-                        <li>Prohibido explícitamente incorporar credenciales, tokens de acceso o claves privadas directamente en el código fuente.</li>
-                        <li>Todo bloque de código debe ser sometido a revisión por pares antes de autorizar su integración en las ramas principales.</li>
-                        <li>Las bibliotecas y dependencias de terceros deben ser verificadas y actualizadas periódicamente.</li>
-                    </ul>
-                    <h4>Controles y Procedimientos:</h4>
-                    <p><strong>Controles:</strong> Herramientas de análisis estático en la cadena de integración continua y filtros automáticos en repositorios para bloquear subida de secretos.</p>
-                    <p><strong>Incumplimiento:</strong> Rechazo automático de la versión propuesta, revisión obligatoria con seguridad y capacitación en buenas prácticas en caso de reiteración.</p>
-                    <p><strong>Revisión:</strong> Evaluación semestral de las directrices de codificación.</p>
-                </div>
-            </article>
+            <div class="politica" id="politica-3">
+                <h3>Política 3. Seguridad de desarrolladores, socios y proveedores</h3>
+                <p><strong>Objetivo:</strong> Reducir los riesgos que pueden surgir del acceso de terceros a herramientas, información, servicios o procesos de TurLux.</p>
+                <p><strong>Alcance:</strong> Se aplica a estudios asociados, desarrolladores independientes, empresas proveedoras, servicios de alojamiento, pasarelas de pago y cualquier tercero que trabaje con la plataforma.</p>
+                <p><strong>Responsables:</strong> Relaciones Comerciales; Seguridad Informática; área Legal; responsables técnicos de los servicios contratados.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Los desarrolladores y proveedores deberán registrarse y acreditar la información necesaria para operar.</li>
+                    <li>Los contratos deberán definir responsabilidades, propiedad intelectual, confidencialidad, seguridad, pagos y tratamiento de datos.</li>
+                    <li>Cada tercero tendrá acceso únicamente a los paneles, proyectos y datos que le correspondan.</li>
+                    <li>Las credenciales temporales deberán tener vencimiento y ser revocadas al finalizar el servicio.</li>
+                    <li>Los proveedores deberán informar incidentes que puedan afectar a TurLux.</li>
+                    <li>Los componentes y servicios externos deberán evaluarse antes de incorporarse a sistemas críticos.</li>
+                    <li>TurLux podrá solicitar evidencias de controles de seguridad cuando el nivel de riesgo lo justifique.</li>
+                </ul>
+                <p><strong>Controles:</strong> La aplicación de esta política se verificará mediante registros de actividad, revisiones de permisos, controles técnicos y auditorías internas, según corresponda al proceso.</p>
+                <p><strong>Procedimiento ante incumplimientos:</strong> Si un tercero incumple las condiciones, se limitará o suspenderá su acceso, se documentará el incidente y se evaluarán las medidas contractuales correspondientes. Si existe riesgo para usuarios o sistemas, se activará el procedimiento de incidentes.</p>
+                <p><strong>Mecanismo de revisión:</strong> Los proveedores críticos se evaluarán al menos una vez al año y los permisos de socios externos se revisarán trimestralmente.</p>
+            </div>
 
-            <!-- Política 3 -->
-            <article class="policy-card">
-                <div class="policy-header">
-                    <h3>Política 3: Gestión de Copias de Seguridad y Respaldo de Datos</h3>
-                    <span class="badge badge-purple">Respaldos</span>
-                </div>
-                <div class="policy-body">
-                    <p class="policy-desc"><strong>Objetivo:</strong> Asegurar la disponibilidad y la capacidad de recuperación de la información ante fallos de hardware, catástrofes o incidentes de seguridad.</p>
-                    <div class="policy-meta">
-                        <div><strong>Alcance:</strong> Repositorios de código, bases de datos de proyectos, configuraciones de infraestructura y recursos de arte digital.</div>
-                        <div><strong>Responsables:</strong> Equipo de Infraestructura y Operaciones.</div>
-                    </div>
-                    <h4>Reglas de Cumplimiento:</h4>
-                    <ul class="styled-list">
-                        <li>Generación diaria automatizada de respaldos incrementales y ejecución semanal de respaldos completos.</li>
-                        <li>Cifrado obligatorio de los datos de respaldo tanto en transferencia como almacenados en ubicaciones externas.</li>
-                        <li>Ejecución programada de pruebas de restauración para validar la integridad de la información.</li>
-                    </ul>
-                    <h4>Controles y Procedimientos:</h4>
-                    <p><strong>Controles:</strong> Automatización mediante scripts verificados, comprobación de sumas de verificación (checksums) y alertas automáticas por interrupción.</p>
-                    <p><strong>Incumplimiento:</strong> Si una tarea de respaldo falla, el técnico de guardia debe resolverla en un lapso no mayor a 3 horas e ingresar el reporte técnico.</p>
-                    <p><strong>Revisión:</strong> Simulacro semestral de recuperación del sistema y revisión anual de las directrices.</p>
-                </div>
-            </article>
+            <div class="politica" id="politica-4">
+                <h3>Política 4. Admisión, evaluación y publicación de videojuegos y software</h3>
+                <p><strong>Objetivo:</strong> Establecer un proceso de revisión antes de que un videojuego o aplicación pueda ofrecerse en la tienda de TurLux.</p>
+                <p><strong>Alcance:</strong> Se aplica a productos desarrollados por la empresa y a productos enviados por desarrolladores externos, incluyendo demos, versiones de acceso anticipado y aplicaciones gratuitas.</p>
+                <p><strong>Responsables:</strong> Equipo de Revisión de Productos; Seguridad Informática; responsables de publicación; área Legal cuando corresponda.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Todo desarrollador deberá presentar información del producto, autoría, requisitos técnicos, versión, precio y condiciones de uso.</li>
+                    <li>Se deberá indicar compatibilidad con distribuciones, arquitecturas y versiones de Linux comprobadas.</li>
+                    <li>Los archivos deberán someterse a análisis de seguridad antes de su publicación.</li>
+                    <li>Se comprobará que el producto no incluya malware, funciones ocultas perjudiciales ni accesos no autorizados al sistema.</li>
+                    <li>El desarrollador deberá declarar que posee derechos suficientes para distribuir el producto y sus componentes.</li>
+                    <li>Las versiones de acceso anticipado y las demos deberán identificarse claramente.</li>
+                    <li>TurLux podrá rechazar o retirar productos que incumplan requisitos técnicos, legales o de seguridad.</li>
+                    <li>Las aprobaciones y rechazos deberán quedar documentados.</li>
+                </ul>
+                <p><strong>Controles:</strong> La aplicación de esta política se verificará mediante registros de actividad, revisiones de permisos, controles técnicos y auditorías internas, según corresponda al proceso.</p>
+                <p><strong>Procedimiento ante incumplimientos:</strong> Un producto que presente riesgos será bloqueado o retirado de la tienda mientras se analiza. El desarrollador recibirá una explicación y podrá presentar una corrección o solicitar una revisión.</p>
+                <p><strong>Mecanismo de revisión:</strong> El proceso se revisará semestralmente y cuando se detecten nuevas técnicas de distribución de software malicioso.</p>
+            </div>
 
-            <!-- Política 4 -->
-            <article class="policy-card">
-                <div class="policy-header">
-                    <h3>Política 4: Respuesta y Gestión de Incidentes de Seguridad</h3>
-                    <span class="badge badge-amber">Incidentes</span>
-                </div>
-                <div class="policy-body">
-                    <p class="policy-desc"><strong>Objetivo:</strong> Definir la metodología de detección, contención y mitigación frente a eventos que pongan en riesgo la seguridad de la información.</p>
-                    <div class="policy-meta">
-                        <div><strong>Alcance:</strong> Todos los activos tecnológicos, instalaciones y personal de la organización.</div>
-                        <div><strong>Responsables:</strong> Equipo de Respuesta a Incidentes de Seguridad (CSIRT) y Personal del Área Técnica.</div>
-                    </div>
-                    <h4>Reglas de Cumplimiento:</h4>
-                    <ul class="styled-list">
-                        <li>Notificación inmediata al soporte técnico ante la detección de cualquier actividad inusual.</li>
-                        <li>Prohibido el apagado o modificación de los equipos afectados sin autorización explícita para preservar la evidencia.</li>
-                        <li>Documentación formal obligatoria registrando causas, impacto producido y acciones correctivas aplicadas.</li>
-                    </ul>
-                    <h4>Controles y Procedimientos:</h4>
-                    <p><strong>Controles:</strong> Herramientas de monitoreo de registros (logs), detección de intromisiones y plataforma centralizada de eventos de red.</p>
-                    <p><strong>Incumplimiento:</strong> La omisión voluntaria o el ocultamiento de un incidente será tipificado como falta grave y sancionado conforme al reglamento interno.</p>
-                    <p><strong>Revisión:</strong> Sesión de análisis posterior a incidentes de severidad alta y revisión anual del plan de emergencia.</p>
-                </div>
-            </article>
+            <div class="politica" id="politica-5">
+                <h3>Política 5. Clasificación de contenido, edades y protección de menores</h3>
+                <p><strong>Objetivo:</strong> Proteger a los usuarios mediante información clara sobre el contenido de los videojuegos y herramientas adecuadas para limitar el acceso según la edad.</p>
+                <p><strong>Alcance:</strong> Se aplica a fichas de productos, imágenes, tráileres, reseñas, publicidad, recomendaciones, foros y controles de cuenta.</p>
+                <p><strong>Responsables:</strong> Equipo de Revisión de Contenido; Moderación; Seguridad Informática; área Legal.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Cada producto deberá declarar su clasificación por edades y las características de contenido relevantes.</li>
+                    <li>Las fichas deberán informar de manera visible si un producto contiene violencia, lenguaje fuerte u otros temas que requieran advertencia.</li>
+                    <li>El contenido clasificado para adultos deberá permanecer oculto por defecto para cuentas de menores y usuarios sin la validación requerida.</li>
+                    <li>Las imágenes públicas, miniaturas y avances deberán respetar las reglas de publicación de la plataforma.</li>
+                    <li>Se ofrecerán controles de privacidad y herramientas de supervisión familiar cuando corresponda.</li>
+                    <li>La verificación de edad deberá limitar la recopilación de datos y respetar la normativa aplicable.</li>
+                    <li>Se prohíbe el contenido ilegal, explotador o que infrinja los derechos de otras personas.</li>
+                </ul>
+                <p><strong>Controles:</strong> La aplicación de esta política se verificará mediante registros de actividad, revisiones de permisos, controles técnicos y auditorías internas, según corresponda al proceso.</p>
+                <p><strong>Procedimiento ante incumplimientos:</strong> El contenido denunciado o detectado podrá ocultarse preventivamente mientras se revisa. Si se confirma una infracción, podrá retirarse el producto o aplicarse una sanción al responsable.</p>
+                <p><strong>Mecanismo de revisión:</strong> La clasificación y las herramientas de protección se revisarán anualmente y ante cambios legales o tecnológicos.</p>
+            </div>
 
-        </section>
-
-    </main>
-
-</body>
-</html>
+            <div class="politica" id="politica-6">
+                <h3>Política 6. Calidad, compatibilidad y comportamiento del software</h3>
+                <p><strong>Objetivo:</strong> Procurar que los productos ofrecidos funcionen de forma razonable, informen sus requisitos y no realicen acciones perjudiciales o inesperadas en los dispositivos.</p>
+                <p><strong>Alcance:</strong> Se aplica a videojuegos, aplicaciones, instaladores, actualizadores, herramientas auxiliares y funciones en línea distribuidas por TurLux.</p>
+                <p><strong>Responsables:</strong> Equipo de Calidad (QA); desarrolladores; Seguridad Informática; responsables de publicación.</p>
+                <p><strong>Reglas:</strong></p>
+                <ul>
+                    <li>Cada producto deberá informar requisitos mínimos y recomendados, dependencias y compatibilidad comprobada.</li>
+                    <li>Los instaladores deberán explicar qué componentes se incorporan y qué permisos necesitan.</li>
+                    <li>Se prohíben cambios no informados en configuraciones del sistema, instalación de software ajeno al producto o recopilación encubierta de información.</li>
+                    <li>Las funciones de telemetría deberán informarse y respetar las opciones de privacidad del usuario.</li>
+                    <li>Los sistemas antitrampas
