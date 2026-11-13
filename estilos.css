@@ -189,19 +189,6 @@ tr:hover {
     background-color: #1a2436;
 }
 
-.aprobacion-box {
-    background-color: #0f172a;
-    border: 1px solid #38bdf8;
-    border-radius: 6px;
-    padding: 18px 22px;
-    margin-top: 25px;
-}
-
-.aprobacion-box h3 {
-    color: #00f2fe;
-    margin-top: 0;
-}
-
 footer {
     margin-top: 40px;
     text-align: center;
