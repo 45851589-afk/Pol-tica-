@@ -3,79 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurLux Games & Software S.A. - Plataforma Linux</title>
+    <title>TurLux Games & Software S.A. - Ecosistema Linux</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <div class="contenedor">
+    <div class="contenedor-principal">
         
-        <header>
-            <div class="meta-doc">Plataforma Oficial | Ecosistema Linux</div>
-            <h1>TurLux Games & Software S.A.</h1>
-            <div class="empresa">Desarrollo nativo, motores gráficos y distribución digital</div>
+        <header class="hero-header">
+            <div class="logo-area">
+                <span class="badge-linux">Nativo Linux &bull; x86_64 / ARM64</span>
+                <h1>TurLux Games & Software S.A.</h1>
+                <p class="subtitle">Plataforma oficial de desarrollo, motores gráficos y distribución digital de videojuegos y software nativo para Linux.</p>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Inicio / Tienda</a>
+                <a href="#productos">Catálogo</a>
+                <a href="#desarrolladores">Portal de Devs</a>
+                <a href="politica.html" class="btn-policy">Políticas de Seguridad</a>
+            </nav>
         </header>
 
-        <nav class="indice">
-            <h2>Navegación</h2>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo Linux</a></li>
-                <li><a href="#comunidad">Comunidad</a></li>
-                <li><a href="politica.html">Políticas de Seguridad</a></li>
-            </ul>
-        </nav>
+        <main>
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h2>Potencia sin concesiones para Linux</h2>
+                    <p>Descubre motores gráficos de alto rendimiento, herramientas de compilación avanzadas y videojuegos AAA diseñados exclusivamente para aprovechar al máximo el rendimiento del kernel y Vulkan.</p>
+                    <div class="hero-buttons">
+                        <a href="#productos" class="btn-primary">Explorar Catálogo</a>
+                        <a href="politica.html" class="btn-secondary">Ver Marco Normativo</a>
+                    </div>
+                </div>
+            </section>
 
-        <section id="inicio">
-            <h2>Bienvenido a TurLux</h2>
-            <p>Somos una compañía especializada en el desarrollo de software de alto rendimiento y videojuegos AAA nativos para sistemas operativos <strong>Linux</strong>. Ofrecemos herramientas de desarrollo, motores gráficos optimizados y un espacio seguro para creadores y jugadores.</p>
-        </section>
+            <section id="productos" class="section-container">
+                <h2>Catálogo Destacado de Software y Juegos</h2>
+                <div class="grid-productos">
+                    <div class="card-producto">
+                        <div class="tag-cat">Motor Gráfico / SDK</div>
+                        <h3>CyberPulse Linux Engine</h3>
+                        <p>Motor de desarrollo gráfico optimizado para arquitecturas Linux con soporte nativo para Vulkan 1.3, optimización de hilos en EXT4/F2FS y compilación cruzada.</p>
+                        <div class="card-footer">
+                            <span class="precio">Estándar / Pro</span>
+                            <a href="#" class="btn-card">Obtener SDK</a>
+                        </div>
+                    </div>
+                    <div class="card-producto">
+                        <div class="tag-cat">Videojuego AAA</div>
+                        <h3>Neon Overdrive</h3>
+                        <p>Acción cyberpunk trepidante desarrollada de forma nativa para Linux. Rendimiento ultrafluido, sin capas de traducción pesadas y con soporte completo para mandos y escritorios Wayland.</p>
+                        <div class="card-footer">
+                            <span class="precio">Disponible</span>
+                            <a href="#" class="btn-card">Jugar Ahora</a>
+                        </div>
+                    </div>
+                    <div class="card-producto">
+                        <div class="tag-cat">Herramienta DevOps</div>
+                        <h3>TurLux Dev Suite</h3>
+                        <p>Entorno integrado para empaquetado de software, firma digital de binarios ELF, gestión de repositorios APT/DNF y automatización CI/CD orientada a desarrolladores independientes.</p>
+                        <div class="card-footer">
+                            <span class="precio">Gratuito / Licencia</span>
+                            <a href="#" class="btn-card">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section id="catalogo">
-            <h2>Software y Videojuegos Destacados</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Tipo</th>
-                        <th>Plataforma Linux</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>CyberPulse Linux Engine</strong></td>
-                        <td>Motor Gráfico / SDK</td>
-                        <td>Ubuntu, Fedora, Arch</td>
-                        <td><a href="#" style="color: #00f2fe; text-decoration: none;">Ver Ficha</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Neon Overdrive (Juego)</strong></td>
-                        <td>Videojuego de Acción</td>
-                        <td>Nativo Vulkan / OpenGL</td>
-                        <td><a href="#" style="color: #00f2fe; text-decoration: none;">Adquirir</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>TurLux Dev Suite</strong></td>
-                        <td>Herramienta de Compilación</td>
-                        <td>Universal Linux x86_64</td>
-                        <td><a href="#" style="color: #00f2fe; text-decoration: none;">Descargar</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="comunidad">
-            <h2>Comunidad y Desarrolladores</h2>
-            <p>Nuestra plataforma permite que estudios independientes y desarrolladores asociados publiquen y comercialicen sus propios proyectos bajo estrictos estándares de calidad y seguridad digital.</p>
-            <div class="politica">
-                <h3>¿Eres desarrollador?</h3>
-                <p>Publica tus aplicaciones y videojuegos en nuestro ecosistema asegurando compatibilidad total con Linux y protección de propiedad intelectual.</p>
-            </div>
-        </section>
+            <section id="desarrolladores" class="section-container developer-spotlight">
+                <h2>Portal para Desarrolladores y Socios</h2>
+                <p>¿Creas contenido o software para Linux? Únete al ecosistema de TurLux y publica tus proyectos con total seguridad, gestión transparente de licencias y distribución global protegida.</p>
+                <div class="dev-features">
+                    <div class="feature-box">
+                        <h3>Publicación Segura</h3>
+                        <p>Análisis automatizado de binarios, verificación de integridad y control estricto de paquetes oficiales.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Protección de Propiedad</h3>
+                        <p>Marcos normativos rigurosos que garantizan la confidencialidad de tus repositorios y código fuente.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Comunidad Activa</h3>
+                        <p>Foros moderados, sistemas de clasificación por edades y herramientas de soporte directo al usuario.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <footer>
-            TurLux Games & Software S.A. &copy; 2026 - Todos los derechos reservados &nbsp;|&nbsp; <a href="politica.html" style="color: #38bdf8; text-decoration: none;">Ver Políticas de Seguridad y Gobierno</a>
+            <div class="footer-content">
+                <p>&copy; 2026 TurLux Games & Software S.A. Todos los derechos reservados.</p>
+                <p class="footer-links">
+                    <a href="index.html">Inicio</a> &bull; 
+                    <a href="politica.html">Políticas de Seguridad Institucional</a> &bull; 
+                    <a href="#">Soporte Técnico</a>
+                </p>
+            </div>
         </footer>
 
     </div>
