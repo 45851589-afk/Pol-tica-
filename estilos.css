@@ -1,284 +1,212 @@
-/* Variables y Configuración General */
-:root {
-    --bg-dark: #0f172a;
-    --bg-card: #1e293b;
-    --bg-card-header: #1a2333;
-    --border-color: #334155;
-    
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    
-    --accent-green: #10b981;
-    --accent-blue: #3b82f6;
-    --accent-purple: #8b5cf6;
-    --accent-red: #ef4444;
-    --accent-amber: #f59e0b;
-    
-    --sidebar-width: 260px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 html {
     scroll-behavior: smooth;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-primary);
-    display: flex;
-    min-height: 100vh;
-}
-
-/* Menú de Navegación Lateral (Sidebar) */
-.sidebar {
-    width: var(--sidebar-width);
-    background-color: #0b1120;
-    border-right: 1px solid var(--border-color);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-}
-
-.brand {
-    padding: 24px 20px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.brand h2 {
-    font-size: 1.2rem;
-    color: var(--text-primary);
-}
-
-.brand h2 span {
-    color: var(--accent-green);
-}
-
-.brand p {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-top: 4px;
-}
-
-.nav-menu {
-    display: flex;
-    flex-direction: column;
-    padding: 16px 10px;
-    gap: 8px;
-    overflow-y: auto;
-}
-
-.nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    padding: 12px 14px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.nav-link:hover {
-    background-color: var(--bg-card);
-    color: var(--text-primary);
-}
-
-/* Área de Contenido Principal */
-.main-content {
-    margin-left: var(--sidebar-width);
-    flex: 1;
-    padding: 40px;
-    max-width: 1100px;
-}
-
-.content-section {
-    margin-bottom: 50px;
-    scroll-margin-top: 40px;
-}
-
-.section-header {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 12px;
-    margin-bottom: 24px;
-}
-
-.section-header h2 {
-    font-size: 1.6rem;
-    color: var(--text-primary);
-}
-
-.section-header p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-top: 4px;
-}
-
-/* Disposiciones en Cuadrícula (Grids) */
-.cards-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.grid-2 {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-/* Estilos de Tarjetas */
-.card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    color: var(--text-primary);
-}
-
-.card p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.card-full {
-    grid-column: 1 / -1;
-}
-
-/* Requisitos CIA (Bordes Superiores) */
-.req-box {
-    border-top: 4px solid var(--accent-blue);
-}
-
-/* Listas personalizadas */
-.styled-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: var(--text-secondary);
-    font-size: 0.93rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f19;
+    color: #e2e8f0;
     line-height: 1.6;
+    margin: 0;
+    padding: 30px 15px;
 }
 
-.styled-list li {
+.contenedor {
+    max-width: 920px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #131b2e, #1a233a);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.1);
+    border: 1px solid #1e293b;
+}
+
+header {
+    border-bottom: 2px solid #00f2fe;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.meta-doc {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     margin-bottom: 8px;
 }
 
-/* Estilos Específicos para Tarjetas de Políticas */
-.policy-card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    margin-bottom: 24px;
+h1 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.empresa {
+    font-weight: bold;
+    color: #38bdf8;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.indice {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+}
+
+.indice h2 {
+    margin-top: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+.indice ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 8px;
+}
+
+.indice li {
+    margin: 0;
+}
+
+.indice a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #131b2e;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.indice a:hover {
+    color: #00f2fe;
+    border-color: #00f2fe;
+    background-color: #1a2436;
+}
+
+h2 {
+    color: #38bdf8;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+h3 {
+    color: #f1f5f9;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 12px;
+    color: #cbd5e1;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 18px;
+}
+
+li {
+    margin-bottom: 6px;
+    color: #cbd5e1;
+}
+
+li strong, p strong {
+    color: #38bdf8;
+}
+
+.politica {
+    background-color: #0f172a;
+    border-left: 4px solid #00f2fe;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.politica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 242, 254, 0.15);
+}
+
+.politica h3 {
+    color: #00f2fe;
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 18px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #0f172a;
+    border-radius: 6px;
     overflow: hidden;
 }
 
-.policy-header {
-    background-color: var(--bg-card-header);
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #1e293b;
 }
 
-.policy-header h3 {
-    font-size: 1.15rem;
-    color: var(--text-primary);
-}
-
-.policy-body {
-    padding: 20px;
-}
-
-.policy-desc {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-bottom: 16px;
-    line-height: 1.5;
-}
-
-.policy-meta {
-    background-color: rgba(15, 23, 42, 0.6);
-    border: 1px solid var(--border-color);
-    padding: 12px 16px;
-    border-radius: 6px;
-    margin-bottom: 16px;
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.policy-body h4 {
-    color: var(--accent-blue);
-    font-size: 0.95rem;
-    margin: 16px 0 10px 0;
-}
-
-.policy-body p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 8px;
-}
-
-/* Badges / Etiquetas */
-.badge {
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.75rem;
+th {
+    background-color: #1e293b;
+    color: #38bdf8;
     font-weight: 600;
-    text-transform: uppercase;
 }
 
-.badge-green { background-color: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
-.badge-blue { background-color: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
-.badge-purple { background-color: rgba(139, 92, 246, 0.2); color: var(--accent-purple); }
-.badge-amber { background-color: rgba(245, 158, 11, 0.2); color: var(--accent-amber); }
+td {
+    color: #cbd5e1;
+}
 
-/* Colores Utilitarios */
-.title-blue { color: var(--accent-blue) !important; }
-.title-green { color: var(--accent-green) !important; }
-.title-purple { color: var(--accent-purple) !important; }
-.title-red { color: var(--accent-red) !important; }
-.title-amber { color: var(--accent-amber) !important; }
+tr:hover {
+    background-color: #1a2436;
+}
 
-.border-blue { border-top-color: var(--accent-blue) !important; }
-.border-green { border-top-color: var(--accent-green) !important; }
-.border-purple { border-top-color: var(--accent-purple) !important; }
-.border-red { border-top-color: var(--accent-red) !important; }
-.border-amber { border-top-color: var(--accent-amber) !important; }
+.aprobacion-box {
+    background-color: #0f172a;
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-top: 25px;
+}
 
-/* Diseño Adaptable para Pantallas Pequeñas */
-@media (max-width: 800px) {
-    body {
-        flex-direction: column;
-    }
+.aprobacion-box h3 {
+    color: #00f2fe;
+    margin-top: 0;
+}
 
-    .sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 20px;
-    }
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
 }
