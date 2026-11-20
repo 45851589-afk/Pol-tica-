@@ -1,1 +1,811 @@
+/* ==========================================================================
+   1. RESET Y BASE GLOBAL
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #07090e;
+    color: #cbd5e1;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+code {
+    background-color: #1e293b;
+    color: #00f2fe;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
+}
+
+/* ==========================================================================
+   2. ESTILOS DE LA TIENDA (index.html)
+   ========================================================================== */
+
+/* Barra superior estilo cliente de juegos */
+.store-topbar {
+    background-color: #0d1322;
+    border-bottom: 1px solid #1e293b;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.store-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.brand-logo {
+    font-weight: 800;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-sub {
+    font-size: 11px;
+    color: #00f2fe;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.store-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.store-nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.store-nav a:hover,
+.store-nav a.active {
+    color: #00f2fe;
+}
+
+.nav-policy-btn {
+    background-color: #0284c7 !important;
+    color: #ffffff !important;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.nav-policy-btn:hover {
+    background-color: #0369a1 !important;
+}
+
+.store-user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box input {
+    background-color: #07090e;
+    border: 1px solid #1e293b;
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: #fff;
+    font-size: 13px;
+    width: 200px;
+}
+
+.user-profile-mock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #131b2e;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #1e293b;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+}
+
+/* Contenedor general de tienda */
+.store-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Barra de categorías */
+.store-categories-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.cat-pill {
+    background-color: #131b2e;
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #1e293b;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.cat-pill:hover,
+.cat-pill.active {
+    background-color: #1a2436;
+    color: #00f2fe;
+    border-color: #00f2fe;
+}
+
+/* Hero Banner Destacado */
+.store-hero {
+    background: linear-gradient(145deg, #131b2e, #0f172a);
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-backdrop {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    padding: 40px;
+    gap: 30px;
+    align-items: center;
+}
+
+.badge-featured {
+    font-size: 11px;
+    font-weight: 700;
+    color: #00f2fe;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-info h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.hero-desc {
+    color: #94a3b8;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-pricing {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.price-tag {
+    font-weight: 700;
+    color: #38bdf8;
+    font-size: 14px;
+}
+
+.btn-store-primary {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    color: #07090e;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.btn-store-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-store-secondary {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #334155;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-store-secondary:hover {
+    background-color: #334155;
+}
+
+.art-frame {
+    background: radial-gradient(circle, #1e293b 0%, #0b0f19 100%);
+    height: 280px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #00f2fe;
+    color: #07090e;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.art-glow {
+    width: 110px;
+    height: 110px;
+    background: #00f2fe;
+    filter: blur(60px);
+    opacity: 0.35;
+}
+
+/* Sección de Productos / Grid */
+.store-section {
+    margin-bottom: 50px;
+}
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.section-header-flex h2 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.tab-btn {
+    background: #131b2e;
+    border: 1px solid #1e293b;
+    color: #94a3b8;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    background: #1a2436;
+    color: #00f2fe;
+    border-color: #00f2fe;
+}
+
+.store-grid-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #131b2e;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.1);
+    border-color: #00f2fe;
+}
+
+.product-thumb {
+    height: 150px;
+    background: #0f172a;
+    position: relative;
+    border-bottom: 1px solid #1e293b;
+}
+
+.engine-thumb {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+.game-thumb {
+    background: linear-gradient(135deg, #0f172a 0%, #311042 100%);
+}
+
+.dev-thumb {
+    background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);
+}
+
+.os-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid #334155;
+    color: #38bdf8;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #00f2fe;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.product-card h3 {
+    color: #fff;
+    font-size: 18px;
+    margin: 5px 0 10px 0;
+}
+
+.product-snippet {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 15px;
+}
+
+.product-price {
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+}
+
+.product-price.free {
+    color: #22c55e;
+}
+
+.btn-buy {
+    background-color: #1e293b;
+    color: #00f2fe;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #334155;
+    transition: all 0.2s;
+}
+
+.btn-buy:hover {
+    background-color: #00f2fe;
+    color: #07090e;
+}
+
+/* Banner Secundario */
+.store-banner-alt {
+    background: linear-gradient(145deg, #0f172a, #131b2e);
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.alt-content h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.alt-content p {
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+}
+
+/* Pie de Página de Tienda */
+.store-footer {
+    background-color: #0d1322;
+    border-top: 1px solid #1e293b;
+    padding: 40px 20px 20px 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1240px;
+    margin: 0 auto 30px auto;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.footer-col a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+    color: #00f2fe;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #64748b;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. ESTILOS DEL DOCUMENTO DE POLÍTICAS (politica_actualizada.html)
+   Encapsulados dentro de .contenedor para no interferir con index.html
+   ========================================================================== */
+
+.contenedor {
+    max-width: 960px;
+    margin: 30px auto;
+    background: linear-gradient(145deg, #131b2e, #1a233a);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.1);
+    border: 1px solid #1e293b;
+}
+
+.contenedor header {
+    border-bottom: 2px solid #00f2fe;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contenedor .meta-doc {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.contenedor h1 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contenedor .empresa,
+.contenedor .empresa a {
+    font-weight: bold;
+    color: #38bdf8;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.contenedor .empresa a:hover {
+    color: #00f2fe;
+    text-decoration: underline;
+}
+
+/* Índice Rápido */
+.contenedor .indice {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+}
+
+.contenedor .indice h2 {
+    margin-top: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+.contenedor .indice ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 8px;
+}
+
+.contenedor .indice li {
+    margin: 0;
+}
+
+.contenedor .indice a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background-color: #131b2e;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.contenedor .indice a:hover {
+    color: #00f2fe;
+    border-color: #00f2fe;
+    background-color: #1a2436;
+}
+
+.contenedor .indice li.indice-grupo,
+.contenedor .indice li.indice-grupo-ext {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+}
+
+.contenedor .indice li.indice-grupo a {
+    background-color: rgba(0, 242, 254, 0.12);
+    border-color: #00f2fe;
+    color: #00f2fe;
+    font-weight: 700;
+}
+
+.contenedor .indice li.indice-grupo-ext a {
+    background-color: rgba(245, 158, 11, 0.12);
+    border-color: #f59e0b;
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+/* Títulos y Textos del Documento */
+.contenedor h2 {
+    color: #38bdf8;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+.contenedor h3 {
+    color: #f1f5f9;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.contenedor p {
+    margin-bottom: 12px;
+    color: #cbd5e1;
+}
+
+.contenedor ul {
+    padding-left: 20px;
+    margin-bottom: 18px;
+}
+
+.contenedor li {
+    margin-bottom: 6px;
+    color: #cbd5e1;
+}
+
+.contenedor li strong,
+.contenedor p strong {
+    color: #38bdf8;
+}
+
+/* Etiquetas de Alcance Interno vs. Externo */
+.badge-alcance {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: -22px;
+}
+
+.badge-interno {
+    background-color: rgba(0, 242, 254, 0.12);
+    color: #00f2fe;
+    border: 1px solid #00f2fe;
+}
+
+.badge-externo {
+    background-color: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid #f59e0b;
+}
+
+/* Tarjetas de Políticas */
+.contenedor .politica {
+    background-color: #0f172a;
+    border-left: 4px solid #00f2fe;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contenedor .politica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 242, 254, 0.15);
+}
+
+.contenedor .politica h3 {
+    color: #00f2fe;
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 18px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 8px;
+}
+
+/* Variante visual para Sección II (Externas) */
+.contenedor .politica.politica-ext {
+    border-left-color: #f59e0b;
+}
+
+.contenedor .politica.politica-ext:hover {
+    box-shadow: 0 6px 12px rgba(245, 158, 11, 0.15);
+}
+
+.contenedor .politica.politica-ext h3 {
+    color: #fbbf24;
+}
+
+/* Tablas del Documento */
+.contenedor table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #0f172a;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.contenedor th,
+.contenedor td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #1e293b;
+}
+
+.contenedor th {
+    background-color: #1e293b;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.contenedor td {
+    color: #cbd5e1;
+}
+
+.contenedor tr:hover {
+    background-color: #1a2436;
+}
+
+/* Caja de Aprobación y Pie del Documento */
+.contenedor .aprobacion-box {
+    background-color: #0f172a;
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-top: 25px;
+}
+
+.contenedor .aprobacion-box h3 {
+    color: #00f2fe;
+    margin-top: 0;
+}
+
+.contenedor footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE (MÓVIL Y TABLET)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero-backdrop {
+        grid-template-columns: 1fr;
+    }
+
+    .store-topbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .store-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenedor {
+        margin: 15px;
+        padding: 20px;
+    }
+}
